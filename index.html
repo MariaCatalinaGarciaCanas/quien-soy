@@ -78,6 +78,9 @@ th{font-family:"Fredoka",sans-serif; font-weight:500; color:var(--soft)}
 .tile .go{font-weight:700; color:var(--lav); text-decoration:underline; text-decoration-thickness:3px; text-underline-offset:4px}
 .tile:hover{border-color:var(--lav)}
 
+.tags{display:flex; flex-wrap:wrap; gap:6px; padding:0; margin:0 0 12px; list-style:none}
+.tags li{background:var(--bg); border:2px solid var(--line); border-radius:999px; padding:0 10px; font-size:.85rem; font-weight:700; color:var(--soft)}
+.more{margin-top:16px; color:var(--soft)}
 footer{margin-top:64px; text-align:center}
 footer h2{font-size:1.7rem}
 footer p{color:var(--soft)}
@@ -110,12 +113,13 @@ footer p{color:var(--soft)}
     <h2 id="historia">Mi camino</h2>
     <p class="lead">No fue una línea recta. Pasé de revisar tuberías a revisar tablas, y mi forma de mirar el riesgo me acompañó en cada paso.</p>
     <ol class="path">
-      <li data-e="🔦"><span class="when">2021 a 2024</span><h3>Campo en ensayos no destructivos</h3><p>Cuatro años en oil &amp; gas, aprendiendo a revisar sin romper. También elaboraba los informes de inspección y pasaba la información de cada trabajo.</p></li>
-      <li data-e="📊"><span class="when">2024</span><h3>Ingeniera de riesgos en Bureau Veritas</h3><p>Inspección basada en riesgo: mi primer encuentro con datos industriales.</p></li>
-      <li data-e="🎓"><span class="when">2025</span><h3>Me formé en tecnología</h3><p>Pausé el campo para estudiar: técnico en programación de aplicaciones en la nube (SENA) y especialización en BI y Big Data (Corporación Asturias).</p></li>
-      <li data-e="❄️"><span class="when">2026</span><h3>Analytics Consultant en Seidor</h3><p>Snowflake y Power BI todos los días. Empecé como practicante y hoy sigo aquí.</p></li>
+      <li data-e="🔦"><span class="when">2021 a 2024</span><h3>Campo en ensayos no destructivos</h3><p>Cuatro años en oil &amp; gas inspeccionando tuberías, tanques, vasijas y celdas de flotación en plantas y estaciones. Buscaba zonas con bajo espesor, y esa información decidía si un equipo se parchaba, se reparaba o se cambiaba. Elaboraba los informes y pasaba los datos de cada trabajo. Ahí aprendí lo que cuesta un dato incorrecto.</p></li>
+      <li data-e="📊"><span class="when">2024</span><h3>Ingeniera de riesgos en Bureau Veritas</h3><p>Inspección basada en riesgo: llevé a un análisis más formal el criterio que ya venía construyendo con datos industriales desde campo.</p></li>
+      <li data-e="🎓"><span class="when">2025</span><h3>Me formé en tecnología</h3><p>Pausé el campo para estudiar: técnico en programación de aplicaciones en la nube (SENA) y especialización en BI y Big Data (Corporación Asturias). En ese tiempo también di clases de inglés y trabajé por cuenta propia.</p></li>
+      <li data-e="🧱"><span class="when">Oct 2025 a ene 2026</span><h3>Datos en Alterra, una startup de salud</h3><p>Mi primer trabajo en tecnología, casi de ingeniería de datos: ayudé a organizar los datos en capas (raw, curated y analytics), escribí scripts en Python con Pandas y Polars para limpiar y validar, y colaboré en automatizar y documentar procesos.</p></li>
+      <li data-e="❄️"><span class="when">2026</span><h3>Analytics Consultant en Seidor</h3><p>Snowflake y Power BI todos los días, y en el camino aprendí Azure, Fabric y SQL, hice ingeniería inversa con mi cliente actual y diseñé prompts para un agente. Entré en enero de 2026 y desde febrero asumí responsabilidades de consultora.</p></li>
       <li data-e="🤖"><span class="when">2026</span><h3>Sigo estudiando</h3><p>Tecnólogo en Gestión de Redes de Datos en el SENA y estudiante de IA, para llegar más lejos con los datos.</p></li>
-      <li class="next" data-e="🛡️"><span class="when">Mi rumbo</span><h3>Seguridad en IA</h3><p>Quiero llevar lo que sé de datos y de riesgo hacia la seguridad de los sistemas de IA. Aquí voy contando cómo avanzo.</p></li>
+      <li class="next" data-e="🛡️"><span class="when">Mi rumbo</span><h3>Seguridad en IA</h3><p>Me interesa la seguridad de los sistemas de IA y estoy aprendiendo: ya escribí sobre quién responde cuando una IA decide, y quiero llevar mi criterio de datos y de riesgo hacia ahí. Aquí voy contando cómo avanzo.</p></li>
     </ol>
   </section>
 
@@ -172,12 +176,54 @@ footer p{color:var(--soft)}
     </article>
   </section>
 
+  <section aria-labelledby="proyectos">
+    <h2 id="proyectos">Mis proyectos</h2>
+    <p class="lead">Proyectos de aprendizaje en ciencia de datos. Cada uno tiene su código y su explicación en GitHub.</p>
+    <div class="grid">
+      <a class="tile" href="https://github.com/MariaCatalinaGarciaCanas/Regresion-bicicletas" target="_blank" rel="noopener">
+        <div class="em">🚲</div><h3>Alquiler de bicicletas</h3>
+        <p>¿Cuántas bicicletas se alquilan según el clima? Usé regresión lineal simple y múltiple con temperatura, humedad, viento y hora. La temperatura fue de las variables que más influyó y el modelo múltiple mejoró la precisión.</p>
+        <ul class="tags"><li>Python</li><li>scikit-learn</li><li>Regresión</li></ul>
+        <span class="go">Ver en GitHub</span>
+      </a>
+      <a class="tile" href="https://github.com/MariaCatalinaGarciaCanas/Clasificacion-Cancer-KNN" target="_blank" rel="noopener">
+        <div class="em">🩺</div><h3>Tumores benignos o malignos</h3>
+        <p>Un modelo KNN que distingue el tipo de tumor a partir de 30 medidas de muestras celulares. Elegí k con validación cruzada (k = 8) y, al estandarizar las variables, la exactitud subió de 92% a 96%.</p>
+        <ul class="tags"><li>Python</li><li>scikit-learn</li><li>Clasificación</li></ul>
+        <span class="go">Ver en GitHub</span>
+      </a>
+    </div>
+    <p class="more">Hay más en mi GitHub, y van llegando nuevos.</p>
+  </section>
+
+  <section aria-labelledby="escribo">
+    <h2 id="escribo">Lo que escribo</h2>
+    <p class="lead">Explico datos e IA con películas y personajes, para que quien está empezando lo entienda.</p>
+    <div class="grid">
+      <a class="tile" href="https://medium.com/@catacanass/pod%C3%ADan-hacerlo-as%C3%AD-que-lo-hicieron-qui%C3%A9n-firma-que-se-use-jurassic-park-y-las-armas-aut%C3%B3nomas-6aa5b95a75a1" target="_blank" rel="noopener">
+        <div class="em">🦖</div><h3>¿Quién firma que se use?</h3>
+        <p>Jurassic Park y las armas autónomas: una reflexión sobre quién responde cuando una IA toma una decisión de vida o muerte.</p>
+        <span class="go">Leer en Medium</span>
+      </a>
+      <a class="tile" href="https://medium.com/@catacanass/te-asusta-que-la-ia-te-quite-el-trabajo-aprende-a-usarla-como-tu-varita-d9422df84e3a" target="_blank" rel="noopener">
+        <div class="em">🪄</div><h3>La IA como tu varita</h3>
+        <p>Harry Potter para aprender a usar la IA: prompts reales para Miro, Figma, Power BI y Excel, pensados para quien empieza en datos.</p>
+        <span class="go">Leer en Medium</span>
+      </a>
+      <a class="tile" href="https://medium.com/@catacanass/as-if-la-teor%C3%ADa-de-la-limpieza-de-datos-al-estilo-cher-horowitz-2cb1523586d3" target="_blank" rel="noopener">
+        <div class="em">💅</div><h3>As If! Limpieza de datos</h3>
+        <p>Por qué un dataset limpio es tan importante, contado al estilo de Cher Horowitz.</p>
+        <span class="go">Leer en Medium</span>
+      </a>
+    </div>
+  </section>
+
   <section aria-labelledby="mundo">
     <h2 id="mundo">Lo que estoy haciendo</h2>
     <div class="grid">
       <a class="tile" href="#" id="yt"><div class="em">🎬</div><h3>Repasos en tablero</h3><p>Explico en video lo que aprendo, paso a paso, como si lo dibujara para una amiga.</p><span class="go">Ver en YouTube</span></a>
-      <a class="tile" href="#" id="md"><div class="em">✍️</div><h3>Mi artículo en Medium</h3><p>Un concepto técnico explicado a través de una película. Es el primero de varios.</p><span class="go">Leer en Medium</span></a>
-      <a class="tile" href="#" id="gh"><div class="em">🐱</div><h3>Mi GitHub</h3><p>Mi código y mis experimentos con datos. Mis proyectos irán apareciendo aquí.</p><span class="go">Abrir GitHub</span></a>
+      <a class="tile" href="#" id="md"><div class="em">✍️</div><h3>Mi artículo en Medium</h3><p>Datos e IA explicados con películas y personajes.</p><span class="go">Leer en Medium</span></a>
+      <a class="tile" href="#" id="gh"><div class="em">🐱</div><h3>Mi GitHub</h3><p>Mi código y mis experimentos con datos.</p><span class="go">Abrir GitHub</span></a>
     </div>
   </section>
 
