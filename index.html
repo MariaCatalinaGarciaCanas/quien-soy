@@ -51,6 +51,9 @@ a{color:var(--lav)}
 .chips{display:flex; flex-wrap:wrap; gap:8px; justify-content:center; padding:0; margin:0; list-style:none}
 .chips li{background:var(--card); border:2px solid var(--line); border-radius:999px; padding:4px 14px; font-weight:700; font-size:.95rem}
 .chips li:first-child{background:var(--violet); border-color:var(--violet); color:#fff}
+.links{display:flex; flex-wrap:wrap; gap:8px; justify-content:center; padding:0; margin:18px 0 0; list-style:none}
+.links a{display:inline-flex; align-items:center; gap:6px; text-decoration:none; color:var(--ink); background:var(--card); border:2px solid var(--line); border-radius:12px; padding:4px 12px; font-weight:700; font-size:.92rem}
+@media (hover:hover){.links a:hover{border-color:var(--lav); color:var(--lav)}}
 
 section{margin-top:56px}
 section>h2{font-size:1.9rem; margin-bottom:10px}
@@ -234,6 +237,14 @@ footer p{color:var(--soft)}
       <li data-i18n="chip_ai">Estudiante de IA</li>
       <li>Bucaramanga, Colombia</li>
     </ul>
+    <ul class="links">
+      <li><a href="https://www.linkedin.com/in/catacanass" target="_blank" rel="noopener">💼 LinkedIn</a></li>
+      <li><a href="https://github.com/MariaCatalinaGarciaCanas" target="_blank" rel="noopener">🐱 GitHub</a></li>
+      <li><a href="https://medium.com/@catacanass" target="_blank" rel="noopener">✍️ Medium</a></li>
+      <li><a href="https://www.youtube.com/channel/UCcpOxHlK7a1u7O_faAvd80g" target="_blank" rel="noopener">🎬 YouTube</a></li>
+      <li><a href="https://www.credly.com/users/catacanass" target="_blank" rel="noopener">🏅 Credly</a></li>
+      <li><a href="mailto:catalinagarciaca@gmail.com" data-i18n="l_mail">✉️ Correo</a></li>
+    </ul>
   </header>
 
   <section aria-labelledby="historia">
@@ -390,6 +401,7 @@ footer p{color:var(--soft)}
       <a class="tile" href="#" id="yt"><div class="em">🎬</div><h3 data-i18n="n1_t">Repasos en tablero</h3><p data-i18n="n1_p">Explico en video lo que aprendo, paso a paso, como si lo dibujara para una amiga.</p><span class="go" data-i18n="go_yt">Ver en YouTube</span></a>
       <a class="tile" href="#" id="md"><div class="em">✍️</div><h3 data-i18n="n2_t">Mi artículo en Medium</h3><p data-i18n="n2_p">Datos e IA explicados con películas y personajes.</p><span class="go" data-i18n="go_md">Leer en Medium</span></a>
       <a class="tile" href="#" id="gh"><div class="em">🐱</div><h3 data-i18n="n3_t">Mi GitHub</h3><p data-i18n="n3_p">Mi código y mis experimentos con datos.</p><span class="go" data-i18n="go_gh2">Abrir GitHub</span></a>
+      <a class="tile" href="https://www.credly.com/users/catacanass" target="_blank" rel="noopener"><div class="em">🏅</div><h3 data-i18n="n4_t">Mis insignias</h3><p data-i18n="n4_p">Las certificaciones e insignias que voy ganando, verificadas en Credly.</p><span class="go" data-i18n="go_cr">Ver en Credly</span></a>
     </div>
   </section>
 
@@ -397,6 +409,7 @@ footer p{color:var(--soft)}
     <h2 data-i18n="f_t">¿Hablamos?</h2>
     <p data-i18n="f_p">Me encanta conocer gente que trabaja con datos, nube e IA.</p>
     <a class="btn" href="#" id="li" data-i18n="f_btn">Escríbeme en LinkedIn</a>
+    <p data-i18n="f_mail">o al correo <a href="mailto:catalinagarciaca@gmail.com">catalinagarciaca@gmail.com</a></p>
   </footer>
 </main>
 
@@ -493,7 +506,12 @@ var EN={
  go_gh2:"Open GitHub",
  f_t:"Let's talk?",
  f_p:"I love meeting people who work with data, cloud and AI.",
- f_btn:"Message me on LinkedIn"
+ f_btn:"Message me on LinkedIn",
+ f_mail:'or by email at <a href="mailto:catalinagarciaca@gmail.com">catalinagarciaca@gmail.com</a>',
+ l_mail:"✉️ Email",
+ n4_t:"My badges",
+ n4_p:"The certifications and badges I earn, verified on Credly.",
+ go_cr:"See on Credly"
 };
 var UI={
  es:{title:"Catalina · Datos con ojo de inspectora",lang:"Read in English",cur:"Personalizar el puntero",theme:"Cambiar entre modo claro y oscuro"},
