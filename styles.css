@@ -73,16 +73,25 @@ a{color:var(--lav)}
 .hero .tag{font-size:clamp(1.15rem,2.2vw,1.45rem); color:var(--soft); max-width:30ch; margin:16px 0 22px; line-height:1.5}
 .chips{display:flex; flex-wrap:wrap; gap:8px; padding:0; margin:0; list-style:none}
 .chips li{background:var(--card); border:2px solid var(--line); border-radius:999px; padding:4px 14px; font-weight:700; font-size:.95rem}
+.hero .chips{margin-top:4px}
 .chips li:first-child{background:var(--violet); border-color:var(--violet); color:#fff}
 .chips li a{display:block; margin:-4px -14px; padding:4px 14px; border-radius:999px; color:inherit; text-decoration:none}
 .chips li{transition:border-color .2s, transform .2s var(--ease), color .2s}
 @media (hover:hover){.chips li:has(a):hover{border-color:var(--lav); color:var(--lav); transform:translateY(-2px)}}
-.links{display:flex; flex-wrap:wrap; gap:8px; padding:0; margin:22px 0 0; list-style:none}
+.links{display:flex; flex-wrap:wrap; gap:8px; padding:0; margin:14px 0 0; list-style:none}
 .links a{display:inline-flex; align-items:center; gap:6px; text-decoration:none; color:var(--ink); background:var(--card); border:2px solid var(--line); border-radius:12px; padding:6px 14px; font-weight:700; font-size:.92rem; transition:border-color .2s, color .2s, transform .2s var(--ease)}
 @media (hover:hover){.links a:hover{border-color:var(--lav); color:var(--lav); transform:translateY(-2px)}}
 .photo{position:relative; width:min(100%,380px); aspect-ratio:1; margin-inline:auto; border-radius:40px; overflow:hidden; background:linear-gradient(150deg,#8b5cf6,#4c1d95); box-shadow:var(--shadow-lg)}
 .photo::before{content:""; position:absolute; inset:0; background:radial-gradient(circle at 25% 18%,rgba(255,255,255,.28),transparent 48%)}
 .photo img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 100%}
+
+.eyebrow{margin:0 0 10px; font-size:.9rem; font-weight:700; letter-spacing:.03em; color:var(--lav)}
+.fullname{margin:10px 0 0; font-weight:700; color:var(--soft); font-size:1.05rem}
+.intro{max-width:56ch; margin:0 0 6px; color:var(--ink)}
+.en-line{margin:0 0 18px; color:var(--lav); font-style:italic; font-weight:600}
+.cta{display:flex; flex-wrap:wrap; gap:10px; margin:22px 0 0}
+.hero-now{margin:20px 0 0; padding:10px 16px; max-width:56ch; border:2px dashed var(--lav); border-radius:16px; background:var(--card); color:var(--soft); font-size:.97rem}
+.hero-now b{color:var(--lav)}
 
 /* ---------- 4. Secciones y botones ---------- */
 .section{padding:var(--section) 0}
@@ -153,6 +162,40 @@ a{color:var(--lav)}
 .bullets li{position:relative; padding-left:22px; color:var(--soft); font-size:1rem; line-height:1.5}
 .bullets li::before{content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:50%; background:var(--violet)}
 
+/* Cadena de la trayectoria, bloque "lo que me llevo" */
+.chain{display:flex; flex-wrap:wrap; align-items:center; gap:8px 6px; list-style:none; padding:0; margin:0 0 32px}
+.chain li{background:var(--card); border:2px solid var(--line); border-radius:999px; padding:4px 14px; font-weight:700; font-size:.92rem}
+.chain li:not(:last-child)::after{content:"→"; margin-left:12px; color:var(--lav)}
+.chain li:last-child{border-style:dashed; border-color:var(--lav); color:var(--lav)}
+.takeaway{margin:18px 0 0; padding:12px 16px; background:var(--bg); border-left:4px solid var(--violet); border-radius:12px; color:var(--soft); font-size:.97rem; line-height:1.5}
+.takeaway b{color:var(--ink)}
+
+/* Experiencia técnica: tres niveles distintos (no solo por color: cada uno lleva su símbolo) */
+
+.sk-list{list-style:none; padding:0; margin:0; display:flex; flex-wrap:wrap; gap:8px}
+.sk{display:inline-flex; align-items:center; gap:6px; border-radius:999px; padding:2px 12px; font-weight:700; font-size:.9rem; border:2px solid var(--line)}
+.sk::before{font-size:.8em}
+.sk.work{background:var(--violet); border-color:var(--violet); color:#fff}
+.sk.work::before{content:"●"}
+.sk.applied{background:rgba(124,58,237,.12); border-color:var(--lav); color:var(--lav)}
+.sk.applied::before{content:"◆"}
+.sk.learning{background:transparent; border:2px dashed var(--soft); color:var(--soft)}
+.sk.learning::before{content:"○"}
+.grid.two{grid-template-columns:repeat(auto-fit,minmax(min(460px,100%),1fr))}
+.sk-list.legend{margin:0 0 28px}
+.tile.skill p{margin:0 0 16px}
+.tile.skill .sk-list{margin-top:auto}
+
+/* Formación */
+.status{align-self:flex-start; display:inline-block; margin-bottom:12px; padding:0 12px; border-radius:999px; font-size:.82rem; font-weight:700; border:2px solid currentColor}
+.status.ok{color:var(--ok)}
+.status.now{color:var(--lav)}
+.status.comp{color:var(--soft)}
+.tile.edu{justify-content:flex-start}
+.tile.edu h3{font-size:1.15rem}
+.tile.edu .inst{margin:0; font-weight:700; color:var(--lav)}
+.tile.edu p{margin-bottom:0}
+
 /* ---------- 7. Aprende conmigo: pestañas ---------- */
 .tabs{position:relative; display:flex; gap:8px; overflow-x:auto; scroll-snap-type:x proximity; scrollbar-width:none; -webkit-overflow-scrolling:touch; padding:4px 2px 14px}
 .tabs::-webkit-scrollbar{display:none}
@@ -165,6 +208,51 @@ a{color:var(--lav)}
 .tabs-note{margin:20px 0 0; color:var(--soft); font-size:.95rem}
 
 /* ---------- 8. Laboratorios interactivos ---------- */
+
+/* Proyectos estratégicos */
+.sub{margin:36px 0 8px; font-size:1.3rem}
+.sub:first-of-type{margin-top:8px}
+.note{margin:0 0 20px; color:var(--soft); max-width:70ch}
+.tile.proj{position:relative; padding-top:44px}
+.tile.proj .badge{position:absolute; top:14px; right:14px}
+.badge.plan{background:transparent; color:var(--soft); border:2px dashed var(--soft)}
+.badge.ok{display:inline-block; margin-right:10px; background:transparent; color:var(--ok); border:2px solid var(--ok); border-radius:999px; padding:0 10px; font-size:.8rem; font-weight:700}
+.facts{margin:10px 0 0; display:grid; gap:10px}
+.facts dt{font-weight:700; font-size:.82rem; letter-spacing:.03em; text-transform:uppercase; color:var(--lav)}
+.facts dd{margin:2px 0 0; color:var(--soft); line-height:1.5; font-size:.95rem}
+.arch-l{margin:14px 0 4px; font-weight:700; font-size:.82rem; letter-spacing:.03em; text-transform:uppercase; color:var(--lav)}
+.arch{margin:0 0 12px; padding:8px 12px; background:var(--bg); border:1px dashed var(--line); border-radius:10px; font-family:ui-monospace,Consolas,monospace; font-size:.85rem; color:var(--ink)}
+
+/* Proyectos estratégicos */
+.sub{margin:36px 0 8px; font-size:1.3rem}
+.sub:first-of-type{margin-top:8px}
+.note{margin:0 0 20px; color:var(--soft); max-width:70ch}
+.tile.proj{position:relative; padding-top:44px}
+.tile.proj .badge{position:absolute; top:14px; right:14px}
+.badge.plan{background:transparent; color:var(--soft); border:2px dashed var(--soft)}
+.badge.ok{display:inline-block; margin-right:10px; background:transparent; color:var(--ok); border:2px solid var(--ok); border-radius:999px; padding:0 10px; font-size:.8rem; font-weight:700}
+.facts{margin:10px 0 0; display:grid; gap:10px}
+.facts dt{font-weight:700; font-size:.82rem; letter-spacing:.03em; text-transform:uppercase; color:var(--lav)}
+.facts dd{margin:2px 0 0; color:var(--soft); line-height:1.5; font-size:.95rem}
+.arch-l{margin:14px 0 4px; font-weight:700; font-size:.82rem; letter-spacing:.03em; text-transform:uppercase; color:var(--lav)}
+.arch{margin:0 0 12px; padding:8px 12px; background:var(--bg); border:1px dashed var(--line); border-radius:10px; font-family:ui-monospace,Consolas,monospace; font-size:.85rem; color:var(--ink)}
+
+/* Fichas de lab */
+.ficha h4{margin:22px 0 8px; font-size:.82rem; letter-spacing:.03em; text-transform:uppercase; color:var(--lav)}
+.ficha .lvl{margin:0 0 4px}
+.ficha .f-grid{display:grid; gap:0 32px; grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr))}
+.ficha ul{margin:0; padding-left:20px; display:grid; gap:6px}
+.ficha pre{margin:0; padding:14px 16px; overflow:auto; background:#1e1b2e; color:#f3efff; border-radius:12px; font:500 .86rem/1.55 ui-monospace,Consolas,monospace}
+.ficha pre.diagram{background:var(--bg); color:var(--ink); border:1px dashed var(--line)}
+.ficha pre.out{margin-top:0; background:#14221c; color:#d6f5e3}
+.ficha pre:focus-visible{outline:3px solid var(--lav); outline-offset:2px}
+.ficha .f-foot{display:flex; flex-wrap:wrap; align-items:flex-end; justify-content:space-between; gap:16px; margin-top:8px}
+.ficha .refs{list-style:none; padding:0}
+.ficha .refs a{color:var(--lav); font-weight:600}
+.ficha .refs a:hover{text-decoration:underline}
+.ficha .out + p{margin:8px 0 0; color:var(--soft); font-size:.93rem}
+.sub{font-weight:700; color:var(--ink)}
+.arch-l{margin-top:18px}
 .block{background:var(--card); border:2px solid var(--line); border-radius:28px; padding:24px; margin-bottom:20px; scroll-margin-top:70px}
 .block>header{display:flex; align-items:center; gap:12px; margin-bottom:6px}
 .block>header .em{font-size:30px}

@@ -5,6 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Catalina · Datos con ojo de inspectora</title>
 <meta name="description" content="Catalina García, Analytics Consultant en Bucaramanga, Colombia. Explico datos e IA con películas y tableros, y comparto mis proyectos y lo que aprendo.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="María Catalina García Cañas · Analytics &amp; Data Engineering, IA y seguridad de IA">
+<meta property="og:description" content="Antes inspeccionaba equipos en campo. Ahora inspecciono datos. Analytics Consultant, estudiante de IA.">
+<meta property="og:image" content="https://mariacatalinagarciacanas.github.io/quien-soy/catalina.webp">
+<meta property="og:url" content="https://mariacatalinagarciacanas.github.io/quien-soy/">
+<meta name="twitter:card" content="summary">
 <meta name="theme-color" content="#7c3aed">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🚀%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,7 +32,9 @@
       <a href="#youtube">YouTube</a>
       <a href="#proyectos" data-i18n="nav_proj">Proyectos</a>
       <a href="#camino" data-i18n="nav_path">Mi camino</a>
+      <a href="#habilidades" data-i18n="nav_skills">Habilidades</a>
       <a href="#aprende" data-i18n="nav_learn">Aprende</a>
+      <a href="#formacion" data-i18n="nav_edu">Formación</a>
     </nav>
     <div class="tools">
       <button type="button" class="tbtn lang" id="lang" aria-label="Read in English"><span data-l="es">ES</span>·<span data-l="en">EN</span></button>
@@ -65,8 +73,12 @@
   <section class="hero" id="inicio" aria-label="Presentación">
     <div class="wrap hero-grid">
       <div class="hero-text">
+        <p class="eyebrow">Analytics &amp; Data Engineering · Artificial Intelligence · AI Security</p>
         <h1 data-i18n="h_title">Hola, soy Catalina</h1>
+        <p class="fullname">María Catalina García Cañas · <span data-i18n="h_role">Ingeniera Metalúrgica y Analytics Consultant</span></p>
         <p class="tag" data-i18n="h_tag">Antes inspeccionaba equipos en campo. Ahora inspecciono datos.</p>
+        <p class="intro" data-i18n="h_intro">Trabajo con datos en SQL, Power BI, Snowflake y Microsoft Fabric, y estudio Inteligencia Artificial con foco en seguridad de IA. Me interesa construir soluciones, entender arquitecturas y explorar sistemas de IA seguros y confiables.</p>
+        <p class="en-line" lang="en">Building data solutions and exploring intelligent systems.</p>
         <ul class="chips">
           <li>Analytics Consultant</li>
           <!-- Los badges con enlace llevan a su pestaña en "Aprende conmigo" (data-tab = id de la pestaña) -->
@@ -76,14 +88,17 @@
           <li><a href="#aprende" data-tab="ia" data-i18n="chip_ai">Estudiante de IA</a></li>
           <li>Bucaramanga, Colombia</li>
         </ul>
+        <div class="cta">
+          <a class="btn" href="https://github.com/MariaCatalinaGarciaCanas" target="_blank" rel="noopener">🐱 GitHub</a>
+          <a class="btn ghost" href="https://www.linkedin.com/in/catacanass" target="_blank" rel="noopener">💼 LinkedIn</a>
+          <a class="btn ghost" href="mailto:catalinagarciaca@gmail.com" data-i18n="l_mail">✉️ Correo</a>
+        </div>
         <ul class="links">
-          <li><a href="https://www.linkedin.com/in/catacanass" target="_blank" rel="noopener">💼 LinkedIn</a></li>
-          <li><a href="https://github.com/MariaCatalinaGarciaCanas" target="_blank" rel="noopener">🐱 GitHub</a></li>
           <li><a href="https://medium.com/@catacanass" target="_blank" rel="noopener">✍️ Medium</a></li>
           <li><a href="https://www.youtube.com/@catacanass/videos" target="_blank" rel="noopener">🎬 YouTube</a></li>
           <li><a href="https://www.credly.com/users/catacanass" target="_blank" rel="noopener">🏅 Credly</a></li>
-          <li><a href="mailto:catalinagarciaca@gmail.com" data-i18n="l_mail">✉️ Correo</a></li>
         </ul>
+        <p class="hero-now" data-i18n="h_now"><b>Ahora:</b> planeando y documentando mi primer pipeline de datos con arquitectura Medallion, que iré publicando en GitHub, y estudiando seguridad de IA.</p>
       </div>
       <div class="hero-photo">
         <!-- Foto profesional (img/catalina.webp). Para cambiarla, reemplaza el archivo o la ruta. -->
@@ -212,35 +227,63 @@
       <div class="sec-head">
         <div>
           <h2 id="t-proyectos" data-i18n="s_proj">Mis proyectos</h2>
-          <p class="lead" data-i18n="s_proj_l">Proyectos de aprendizaje en ciencia de datos. Cada uno tiene su código y su explicación en GitHub.</p>
+          <p class="lead" data-i18n="s_proj_l">Separo lo que ya terminé de lo que estoy preparando. Cada proyecto terminado tiene su código en GitHub.</p>
         </div>
         <div class="sec-actions">
           <a class="btn ghost" href="https://github.com/MariaCatalinaGarciaCanas" target="_blank" rel="noopener" data-i18n="proj_all">Ver mi GitHub</a>
         </div>
       </div>
+      <h3 class="sub" data-i18n="sub_strat">Proyectos estratégicos</h3>
+      <p class="note" data-i18n="sub_strat_l">Son los tres que estoy preparando. Todavía no tienen repositorio publicado, así que no muestran resultados: los agrego a medida que existan.</p>
+      <div class="grid">
+        <article class="tile proj">
+          <span class="badge plan" data-i18n="st_plan">En planeación</span>
+          <div class="em" aria-hidden="true">🧱</div>
+          <h3 data-i18n="sp1_t">Data Engineering Pipeline</h3>
+          <dl class="facts"><div><dt data-i18n="f_prob">Problema</dt><dd data-i18n="sp1_p">Los datos públicos de energía llegan en crudo y no se pueden analizar de forma confiable sin un proceso ordenado.</dd></div><div><dt data-i18n="f_obj">Objetivo</dt><dd data-i18n="sp1_o">Construir un pipeline de punta a punta con datos de la API pública de la EIA, con pruebas de calidad en cada capa.</dd></div><div><dt data-i18n="f_impl">Implementación</dt><dd data-i18n="sp1_i">Ingesta con Python, orquestación, capas Bronze, Silver y Gold en Snowflake, contenedores con Docker y CI/CD.</dd></div><div><dt data-i18n="f_res">Resultados</dt><dd data-i18n="sp1_r">Aún no hay. Los publicaré con el repositorio, con su README y su diagrama.</dd></div></dl>
+          <p class="arch-l" data-i18n="f_arch">Arquitectura prevista</p>
+          <p class="arch" data-i18n="sp1_a">API de la EIA → Python → Bronze → Silver → Gold (Snowflake)</p>
+          <ul class="tags"><li>Python</li><li>SQL</li><li>Snowflake</li><li>Docker</li><li>Airflow / Dagster</li></ul>
+          <a class="go" href="https://github.com/MariaCatalinaGarciaCanas" target="_blank" rel="noopener" data-i18n="go_profile">Seguir en GitHub</a>
+        </article>
+        <article class="tile proj">
+          <span class="badge plan" data-i18n="st_plan">En planeación</span>
+          <div class="em" aria-hidden="true">🛡️</div>
+          <h3 data-i18n="sp2_t">AI Security / Agent Governance</h3>
+          <dl class="facts"><div><dt data-i18n="f_prob">Problema</dt><dd data-i18n="sp2_p">Los agentes de IA usan herramientas y datos, y casi nadie prueba cómo se les puede atacar.</dd></div><div><dt data-i18n="f_obj">Objetivo</dt><dd data-i18n="sp2_o">Crear un agente propio, atacarlo con riesgos de las listas de OWASP para aplicaciones con LLM y documentar cómo se mitigan.</dd></div><div><dt data-i18n="f_impl">Implementación</dt><dd data-i18n="sp2_i">Agente sobre una API de LLM, un conjunto de pruebas de ataque y un reporte con vulnerabilidades y controles.</dd></div><div><dt data-i18n="f_res">Resultados</dt><dd data-i18n="sp2_r">Aún no hay. Publicaré las pruebas y los hallazgos, sin exagerar su alcance.</dd></div></dl>
+          <p class="arch-l" data-i18n="f_arch">Arquitectura prevista</p>
+          <p class="arch" data-i18n="sp2_a">Agente propio → herramientas y permisos → pruebas de ataque → reporte de riesgos</p>
+          <ul class="tags"><li>Python</li><li>LLM API</li><li>OWASP</li><li>Seguridad de agentes</li></ul>
+          <a class="go" href="https://github.com/MariaCatalinaGarciaCanas" target="_blank" rel="noopener" data-i18n="go_profile">Seguir en GitHub</a>
+        </article>
+        <article class="tile proj">
+          <span class="badge plan" data-i18n="st_plan">En planeación</span>
+          <div class="em" aria-hidden="true">📐</div>
+          <h3 data-i18n="sp3_t">Analytics Engineering</h3>
+          <dl class="facts"><div><dt data-i18n="f_prob">Problema</dt><dd data-i18n="sp3_p">Un dashboard solo es confiable si el modelo de datos que lo alimenta está probado y documentado.</dd></div><div><dt data-i18n="f_obj">Objetivo</dt><dd data-i18n="sp3_o">Modelar la capa Gold en estrella con pruebas y documentación, y construir encima un dashboard en Power BI.</dd></div><div><dt data-i18n="f_impl">Implementación</dt><dd data-i18n="sp3_i">Modelos con dbt sobre Snowflake, pruebas y documentación, y un reporte de Power BI conectado a la capa Gold.</dd></div><div><dt data-i18n="f_res">Resultados</dt><dd data-i18n="sp3_r">Aún no hay. Dependen del pipeline anterior y se publicarán con él.</dd></div></dl>
+          <p class="arch-l" data-i18n="f_arch">Arquitectura prevista</p>
+          <p class="arch" data-i18n="sp3_a">Gold (Snowflake) → dbt (modelo en estrella, pruebas) → Power BI</p>
+          <ul class="tags"><li>dbt</li><li>Snowflake</li><li>SQL</li><li>Power BI</li></ul>
+          <a class="go" href="https://github.com/MariaCatalinaGarciaCanas" target="_blank" rel="noopener" data-i18n="go_profile">Seguir en GitHub</a>
+        </article>
+      </div>
+      <h3 class="sub" data-i18n="sub_done">Proyectos de aprendizaje terminados</h3>
       <div class="grid">
         <a class="tile" href="https://github.com/MariaCatalinaGarciaCanas/Regresion-bicicletas" target="_blank" rel="noopener">
           <div class="em" aria-hidden="true">🚲</div><h3 data-i18n="pr1_t">Alquiler de bicicletas</h3>
           <p data-i18n="pr1_p">¿Cuántas bicicletas se alquilan según el clima? Usé regresión lineal simple y múltiple con temperatura, humedad, viento y hora. La temperatura fue de las variables que más influyó y el modelo múltiple mejoró la precisión.</p>
           <ul class="tags"><li>Python</li><li>scikit-learn</li><li data-i18n="tag_reg">Regresión</li></ul>
-          <span class="go" data-i18n="go_gh">Ver en GitHub</span>
+          <span class="badge ok" data-i18n="st_done">Terminado</span><span class="go" data-i18n="go_gh">Ver en GitHub</span>
         </a>
         <a class="tile" href="https://github.com/MariaCatalinaGarciaCanas/Clasificacion-Cancer-KNN" target="_blank" rel="noopener">
           <div class="em" aria-hidden="true">🩺</div><h3 data-i18n="pr2_t">Tumores benignos o malignos</h3>
           <p data-i18n="pr2_p">Un modelo KNN que distingue el tipo de tumor a partir de 30 medidas de muestras celulares. Elegí k con validación cruzada (k = 8) y, al estandarizar las variables, la exactitud subió de 92% a 96%.</p>
           <ul class="tags"><li>Python</li><li>scikit-learn</li><li data-i18n="tag_cls">Clasificación</li></ul>
-          <span class="go" data-i18n="go_gh">Ver en GitHub</span>
+          <span class="badge ok" data-i18n="st_done">Terminado</span><span class="go" data-i18n="go_gh">Ver en GitHub</span>
         </a>
-        <!-- Proyecto en construcción: cuando tenga repositorio, cambia <article> por <a href="..."> como las otras dos -->
-        <article class="tile wip">
-          <span class="badge" data-i18n="wip">En desarrollo</span>
-          <div class="em" aria-hidden="true">🛠️</div><h3 data-i18n="pr3_t">Pipeline de datos de punta a punta</h3>
-          <p data-i18n="pr3_p">Un pipeline completo con datos públicos del sector energía: capas Bronze, Silver y Gold, pruebas de calidad y, al final, gobernanza y seguridad pensadas para trabajar con IA. Lo construyo paso a paso y lo voy documentando.</p>
-          <ul class="tags"><li>Python</li><li>SQL</li><li>Snowflake</li><li data-i18n="tag_sec">Seguridad en IA</li></ul>
-          <a class="go" href="https://github.com/MariaCatalinaGarciaCanas" target="_blank" rel="noopener" data-i18n="pr3_go">Seguir en GitHub</a>
-        </article>
+        
       </div>
-      <p class="more" data-i18n="s_proj_more">Hay más en mi GitHub, y van llegando nuevos.</p>
+      <p class="more" data-i18n="s_proj_more">Voy publicando los repositorios poco a poco en mi GitHub.</p>
     </div>
   </section>
 
@@ -253,6 +296,9 @@
           <p class="lead" data-i18n="s_path_l">No fue una línea recta. Pasé de revisar tuberías a revisar tablas, y mi forma de mirar el riesgo me acompañó en cada paso.</p>
         </div>
       </div>
+      <ol class="chain" data-i18n="chain_b" aria-label="De la ingeniería a la IA">
+        <li>Ingeniería Metalúrgica</li><li>Inspección y riesgos</li><li>Data Analytics</li><li>Business Intelligence</li><li>Data Engineering</li><li>Inteligencia Artificial</li>
+      </ol>
       <ol class="stages">
         <li class="stage">
           <div class="stage-head">
@@ -260,12 +306,14 @@
             <span class="when">2021 – 2024</span>
             <h3 data-i18n="st1_t">Ingeniería de campo y riesgos</h3>
           </div>
-          <ul class="bullets" data-i18n="st1_b">
-            <li>Cuatro años en oil &amp; gas con ensayos no destructivos en plantas y estaciones.</li>
-            <li>Informes y datos de cada trabajo: ahí aprendí lo que cuesta un dato incorrecto.</li>
-            <li>2024: ingeniera de riesgos en Bureau Veritas, con inspección basada en riesgo.</li>
-            <li>Mi forma de mirar el riesgo me acompañó al mundo de los datos.</li>
-          </ul>
+          <div class="stage-body">
+            <ul class="bullets" data-i18n="st1_b">
+              <li>Cuatro años en oil &amp; gas con ensayos no destructivos: inspección de equipos en plantas y estaciones.</li>
+              <li>Informes y datos de cada trabajo: ahí aprendí lo que cuesta un dato incorrecto.</li>
+              <li>2024 · Ingeniera de riesgos en Bureau Veritas (10 meses): inspección basada en riesgo y análisis de datos industriales.</li>
+            </ul>
+            <p class="takeaway" data-i18n="st1_k"><b>Lo que me llevo:</b> pensamiento analítico, comprensión de procesos industriales y respeto por la calidad y la confiabilidad de los datos.</p>
+          </div>
         </li>
         <li class="stage">
           <div class="stage-head">
@@ -273,27 +321,100 @@
             <span class="when">2025</span>
             <h3 data-i18n="st2_t">Transición a datos y nube</h3>
           </div>
-          <ul class="bullets" data-i18n="st2_b">
-            <li>Pausé el campo para estudiar: técnico en nube (SENA) y BI y Big Data.</li>
-            <li>Mi primer trabajo en tecnología: Alterra, una startup de salud.</li>
-            <li>Primeros pipelines con Python, Pandas y Polars (raw, curated, analytics).</li>
-            <li>Colaboré automatizando y documentando procesos de datos.</li>
-          </ul>
+          <div class="stage-body">
+            <ul class="bullets" data-i18n="st2_b">
+              <li>Pausé el campo para estudiar: técnico en programación de aplicaciones en la nube (SENA) y especialización en BI y Big Data.</li>
+              <li>Oct 2025 – ene 2026 · Alterra, una startup de salud: mi primer trabajo en tecnología.</li>
+              <li>Primeros pipelines con Python, Pandas y Polars, con los datos organizados en capas raw, curated y analytics.</li>
+              <li>Colaboré automatizando y documentando procesos de datos.</li>
+            </ul>
+            <p class="takeaway" data-i18n="st2_k"><b>Lo que me llevo:</b> modelamiento de información, y automatización y optimización de procesos con código.</p>
+          </div>
         </li>
         <li class="stage now">
           <div class="stage-head">
             <div class="stage-num" aria-hidden="true">3</div>
             <span class="when" data-i18n="st3_when">2026 – Actualidad</span>
-            <h3 data-i18n="st3_t">Analytics Consultant y maestría en IA</h3>
+            <h3 data-i18n="st3_t">Analytics Consultant y estudiante de IA</h3>
           </div>
-          <ul class="bullets" data-i18n="st3_b">
-            <li>Desde enero de 2026 en Seidor; hoy, Analytics Consultant.</li>
-            <li>Mi día a día mezcla Power BI, Snowflake, Fabric y notebooks, según el proyecto.</li>
-            <li>Entre mis funciones está construir agentes de IA.</li>
-            <li>Maestría en IA y tecnólogo en redes de datos, con rumbo a la seguridad en IA.</li>
-          </ul>
+          <div class="stage-body">
+            <ul class="bullets" data-i18n="st3_b">
+              <li>Ene – jun 2026 · Analytics Analyst Trainee en Seidor.</li>
+              <li>Desde jul 2026 · Analytics Consultant en Seidor.</li>
+              <li>Mi trabajo mezcla SQL, Power BI, Snowflake, Microsoft Fabric y notebooks, según lo que necesite cada proyecto.</li>
+              <li>Entre mis funciones también está construir agentes de IA.</li>
+              <li>Estudio Inteligencia Artificial y un tecnólogo en Gestión de Redes de Datos (SENA), con rumbo a la seguridad en IA.</li>
+            </ul>
+            <p class="takeaway" data-i18n="st3_k"><b>Lo que me llevo:</b> resolver problemas de negocio con datos de punta a punta, y una mirada de riesgo que quiero llevar a la seguridad en IA.</p>
+          </div>
         </li>
       </ol>
+    </div>
+  </section>
+
+  <!-- ============ 5b. EXPERIENCIA TÉCNICA (por nivel real de uso) ============ -->
+  <section class="section" id="habilidades" aria-labelledby="t-habilidades">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2 id="t-habilidades" data-i18n="s_skills">Experiencia técnica</h2>
+          <p class="lead" data-i18n="s_skills_l">No domino todo al mismo nivel, y por eso lo separo: lo que uso en mi trabajo, lo que he aplicado en proyectos y lo que estoy aprendiendo.</p>
+        </div>
+      </div>
+      <ul class="legend sk-list">
+        <li class="sk work" data-i18n="lg_work">Lo uso en mi trabajo</li>
+        <li class="sk applied" data-i18n="lg_applied">Lo he aplicado en proyectos</li>
+        <li class="sk learning" data-i18n="lg_learn">En formación</li>
+      </ul>
+      <!-- Para cambiar el nivel de una habilidad, cambia su clase: work (trabajo), applied (proyectos) o learning (formación) -->
+      <div class="grid two">
+        <article class="tile skill">
+          <h3>📊 Data &amp; Analytics</h3>
+          <p data-i18n="sd1">Consultas, modelos y reportes para responder preguntas del negocio.</p>
+          <ul class="sk-list">
+            <li class="sk work">SQL</li>
+            <li class="sk work">Power BI</li>
+            <li class="sk work">DAX</li>
+            <li class="sk work">Power Query</li>
+            <li class="sk work" data-i18n="sk_model">Modelamiento de datos</li>
+            <li class="sk work">Snowflake</li>
+          </ul>
+        </article>
+        <article class="tile skill">
+          <h3>🧱 Data Engineering</h3>
+          <p data-i18n="sd2">Pipelines que llevan el dato crudo a un dato confiable.</p>
+          <ul class="sk-list">
+            <li class="sk work">Microsoft Fabric</li>
+            <li class="sk work" data-i18n="sk_medallion">Arquitectura Medallion</li>
+            <li class="sk work">ETL / ELT</li>
+            <li class="sk work">Python</li>
+            <li class="sk work" data-i18n="sk_process">Procesamiento y transformación de datos</li>
+            <li class="sk learning">Spark</li>
+          </ul>
+        </article>
+        <article class="tile skill">
+          <h3>🤖 Artificial Intelligence</h3>
+          <p data-i18n="sd3">Modelos y agentes, desde la práctica y desde el estudio.</p>
+          <ul class="sk-list">
+            <li class="sk applied">Machine Learning</li>
+            <li class="sk applied" data-i18n="sk_agentic">Sistemas agénticos</li>
+            <li class="sk learning">LLMs</li>
+            <li class="sk learning">RAG</li>
+            <li class="sk learning" data-i18n="sk_orch">Orquestación de herramientas</li>
+          </ul>
+        </article>
+        <article class="tile skill">
+          <h3>🛡️ AI Security &amp; Governance</h3>
+          <p data-i18n="sd4">Mi rumbo: que los sistemas de IA sean seguros y confiables. Aquí estoy en formación.</p>
+          <ul class="sk-list">
+            <li class="sk learning" data-i18n="sk_llmsec">Seguridad de aplicaciones con LLMs</li>
+            <li class="sk learning" data-i18n="sk_agentsec">Seguridad de agentes</li>
+            <li class="sk learning" data-i18n="sk_perms">Control de herramientas y permisos</li>
+            <li class="sk learning" data-i18n="sk_risk">Evaluación de riesgos</li>
+            <li class="sk learning" data-i18n="sk_gov">Gobernanza de sistemas de IA</li>
+          </ul>
+        </article>
+      </div>
     </div>
   </section>
 
@@ -303,16 +424,20 @@
       <div class="sec-head">
         <div>
           <h2 id="t-aprende" data-i18n="s_learn">Aprende conmigo</h2>
-          <p class="lead" data-i18n="s_learn_l">Cada pestaña es un tema que estudio. Primero lo explico en el tablero, luego lo convierto en una lección que puedes tocar.</p>
+          <p class="lead" data-i18n="s_learn_l">Cada pestaña es un tema que estudio. Cada ficha trae el problema, los conceptos, un diagrama, un ejemplo con código, lo que deberías ver y los errores comunes.</p>
         </div>
       </div>
 
       <div class="tabs" id="labTabs" role="tablist" aria-label="Temas para aprender" data-i18n-aria="tabs_aria">
         <button type="button" class="tab" role="tab" id="tab-snow" aria-controls="panel-snow" aria-selected="true">❄️ Snowflake</button>
+        <button type="button" class="tab" role="tab" id="tab-medal" aria-controls="panel-medal" aria-selected="false" tabindex="-1" data-i18n="toc_medal">🏅 Medallion</button>
+        <button type="button" class="tab" role="tab" id="tab-sqlpy" aria-controls="panel-sqlpy" aria-selected="false" tabindex="-1">🐍 SQL + Python</button>
+        <button type="button" class="tab" role="tab" id="tab-git" aria-controls="panel-git" aria-selected="false" tabindex="-1" data-i18n="toc_git">🌿 Git y GitHub</button>
+        <button type="button" class="tab" role="tab" id="tab-cloud" aria-controls="panel-cloud" aria-selected="false" tabindex="-1" data-i18n="toc_cloud">☁️ Nube</button>
+        <button type="button" class="tab" role="tab" id="tab-agent" aria-controls="panel-agent" aria-selected="false" tabindex="-1" data-i18n="toc_agent">🛡️ Agentes y seguridad</button>
         <button type="button" class="tab" role="tab" id="tab-pbi" aria-controls="panel-pbi" aria-selected="false" tabindex="-1">📊 Power BI</button>
         <button type="button" class="tab" role="tab" id="tab-dp" aria-controls="panel-dp" aria-selected="false" tabindex="-1">🧱 DP-700</button>
         <button type="button" class="tab" role="tab" id="tab-net" aria-controls="panel-net" aria-selected="false" tabindex="-1" data-i18n="toc_net">🌐 Redes</button>
-        <button type="button" class="tab" role="tab" id="tab-git" aria-controls="panel-git" aria-selected="false" tabindex="-1" data-i18n="toc_git">🌿 Git y GitHub</button>
         <button type="button" class="tab" role="tab" id="tab-vs" aria-controls="panel-vs" aria-selected="false" tabindex="-1">🧑‍💻 VS Code</button>
         <button type="button" class="tab" role="tab" id="tab-ia" aria-controls="panel-ia" aria-selected="false" tabindex="-1" data-i18n="toc_ia">🤖 IA</button>
       </div>
@@ -336,6 +461,177 @@
                 <p class="why" id="why"></p>
               </div>
             </article>
+
+        <article class="block ficha" aria-labelledby="fh-snowload">
+          <header><span class="em">❄️</span><h3 id="fh-snowload" data-i18n="lab_snowload_title">Cargar un CSV a Snowflake y limpiarlo</h3></header>
+          <p class="lvl"><span class="sk work" data-i18n="lab_snowload_level">Lo uso en mi trabajo</span></p>
+          <div class="f-grid">
+            <section><h4 data-i18n="f_prob">Problema</h4><p data-i18n="lab_snowload_prob">Tienes un CSV en tu computador y necesitas una tabla confiable en Snowflake, sin que un valor malo detenga toda la carga.</p></section>
+            <section><h4 data-i18n="fl_concepts">Conceptos</h4><ul data-i18n="lab_snowload_concepts"><li><b>Stage:</b> un lugar donde Snowflake recibe archivos antes de cargarlos.</li><li><b>COPY INTO:</b> el comando que mueve el archivo del stage a una tabla.</li><li><b>TRY_TO_*:</b> convierten tipos y devuelven NULL si falla, en vez de romper la consulta.</li></ul></section>
+          </div>
+          <h4 data-i18n="fl_diagram">Diagrama</h4><pre class="diagram" tabindex="0" aria-label="Diagrama"><code>CSV local --PUT--&gt; STAGE --COPY INTO--&gt; tabla bronze --CREATE TABLE AS--&gt; tabla silver</code></pre>
+          <h4 data-i18n="fl_example">Ejemplo</h4><p data-i18n="lab_snowload_example">Cargo todo como texto a una tabla bronze y convierto fechas y montos en la tabla silver. Los registros con error quedan en NULL y los puedo revisar.</p>
+          <h4 data-i18n="fl_code">Código</h4><pre class="code" tabindex="0"><code>CREATE OR REPLACE FILE FORMAT ff_csv
+  TYPE = CSV SKIP_HEADER = 1 FIELD_OPTIONALLY_ENCLOSED_BY = '"';
+
+CREATE OR REPLACE STAGE stg_ventas FILE_FORMAT = ff_csv;
+-- Desde SnowSQL:  PUT file://ventas.csv @stg_ventas;
+
+CREATE OR REPLACE TABLE bronze_ventas
+  (id_venta STRING, fecha STRING, pais STRING, monto STRING);
+
+COPY INTO bronze_ventas FROM @stg_ventas ON_ERROR = 'CONTINUE';
+
+CREATE OR REPLACE TABLE silver_ventas AS
+SELECT DISTINCT
+  id_venta,
+  TRY_TO_DATE(fecha)           AS fecha,
+  pais,
+  TRY_TO_NUMBER(monto, 18, 2)  AS monto
+FROM bronze_ventas
+WHERE id_venta IS NOT NULL;</code></pre>
+          <h4 data-i18n="fl_expected">Qué deberías ver</h4><pre class="code out" tabindex="0"><code>COPY INTO devuelve una fila por archivo con rows_loaded y errors_seen.
+SELECT COUNT(*) FROM silver_ventas;  -- menos filas que bronze_ventas</code></pre><p data-i18n="lab_snowload_outnote">Revisa errors_seen: si no es cero, mira cuáles filas fallaron antes de confiar en la tabla.</p>
+          <h4 data-i18n="fl_errors">Errores comunes</h4><ul data-i18n="lab_snowload_errors"><li>Usar ON_ERROR = 'CONTINUE' y no revisar cuántos errores hubo.</li><li>Cargar directo con tipos estrictos: una fecha mala detiene toda la carga.</li><li>Olvidar el SKIP_HEADER y cargar el encabezado como dato.</li></ul>
+          <div class="f-foot">
+            <div><h4 data-i18n="fl_refs">Referencias</h4><ul class="refs"><li><a href="https://docs.snowflake.com/en/sql-reference/sql/copy-into-table" target="_blank" rel="noopener">COPY INTO table (Snowflake docs)</a></li><li><a href="https://docs.snowflake.com/en/user-guide/data-load-overview" target="_blank" rel="noopener">Overview of data loading (Snowflake docs)</a></li></ul></div>
+            <a class="btn ghost" href="https://github.com/MariaCatalinaGarciaCanas" target="_blank" rel="noopener" data-i18n="fl_repo">Más en mi GitHub</a>
+          </div>
+        </article>
+
+      </div>
+      <div class="tabpanel" role="tabpanel" id="panel-medal" aria-labelledby="tab-medal" hidden>
+        <article class="block ficha" aria-labelledby="fh-medal">
+          <header><span class="em">🏅</span><h3 id="fh-medal" data-i18n="lab_medal_title">Arquitectura Medallion en Fabric</h3></header>
+          <p class="lvl"><span class="sk work" data-i18n="lab_medal_level">Lo uso en mi trabajo</span></p>
+          <div class="f-grid">
+            <section><h4 data-i18n="f_prob">Problema</h4><p data-i18n="lab_medal_prob">Un archivo crudo trae duplicados, fechas como texto y montos mal escritos. Si lo conectas directo a un reporte, cada cifra queda en duda.</p></section>
+            <section><h4 data-i18n="fl_concepts">Conceptos</h4><ul data-i18n="lab_medal_concepts"><li><b>Bronze:</b> el dato tal como llegó, sin arreglar. Es tu respaldo.</li><li><b>Silver:</b> limpio, con tipos correctos y sin duplicados.</li><li><b>Gold:</b> agregado y listo para el negocio o para Power BI.</li><li>En Fabric las tres capas suelen ser tablas Delta en un Lakehouse.</li></ul></section>
+          </div>
+          <h4 data-i18n="fl_diagram">Diagrama</h4><pre class="diagram" tabindex="0" aria-label="Diagrama"><code>CSV / API  →  BRONZE (crudo)  →  SILVER (limpio)  →  GOLD (agregado)  →  Power BI
+                  append       reglas de calidad     reglas de negocio</code></pre>
+          <h4 data-i18n="fl_example">Ejemplo</h4><p data-i18n="lab_medal_example">Ventas en CSV con id_venta repetido y monto como texto. Bronze lo guarda igual, Silver lo corrige y Gold suma las ventas por día y país.</p>
+          <h4 data-i18n="fl_code">Código</h4><pre class="code" tabindex="0"><code># Notebook de Fabric (PySpark). Ejemplo didáctico.
+from pyspark.sql import functions as F
+
+# BRONZE: guardar tal cual llega
+raw = spark.read.option("header", True).csv("Files/ventas.csv")
+raw.write.mode("append").format("delta").saveAsTable("bronze_ventas")
+
+# SILVER: tipos, nulos y duplicados
+silver = (spark.table("bronze_ventas")
+    .filter(F.col("id_venta").isNotNull())
+    .dropDuplicates(["id_venta"])
+    .withColumn("fecha", F.to_date("fecha"))
+    .withColumn("monto", F.col("monto").cast("decimal(18,2)")))
+silver.write.mode("overwrite").format("delta").saveAsTable("silver_ventas")
+
+# GOLD: lo que consume el negocio
+gold = silver.groupBy("fecha", "pais").agg(F.sum("monto").alias("ventas"))
+gold.write.mode("overwrite").format("delta").saveAsTable("gold_ventas_dia_pais")</code></pre>
+          <h4 data-i18n="fl_expected">Qué deberías ver</h4><pre class="code out" tabindex="0"><code>bronze_ventas : 1.000 filas (con duplicados)
+silver_ventas : 962 filas (sin duplicados ni nulos)
+gold_ventas_dia_pais : 1 fila por fecha y país</code></pre><p data-i18n="lab_medal_outnote">Las cifras son de ejemplo: lo importante es que Silver tenga menos filas que Bronze y que puedas explicar la diferencia.</p>
+          <h4 data-i18n="fl_errors">Errores comunes</h4><ul data-i18n="lab_medal_errors"><li>Limpiar los datos en Bronze: pierdes la copia original.</li><li>Sobrescribir Bronze en cada carga: pierdes el historial.</li><li>No definir la llave única antes de quitar duplicados.</li><li>Meter reglas de negocio en Silver en lugar de Gold.</li></ul>
+          <div class="f-foot">
+            <div><h4 data-i18n="fl_refs">Referencias</h4><ul class="refs"><li><a href="https://learn.microsoft.com/en-us/fabric/onelake/onelake-medallion-lakehouse-architecture" target="_blank" rel="noopener">Medallion lakehouse architecture (Microsoft Learn)</a></li><li><a href="https://learn.microsoft.com/en-us/fabric/data-engineering/lakehouse-and-delta-tables" target="_blank" rel="noopener">Delta Lake tables in Fabric (Microsoft Learn)</a></li></ul></div>
+            <a class="btn ghost" href="https://github.com/MariaCatalinaGarciaCanas" target="_blank" rel="noopener" data-i18n="fl_repo">Más en mi GitHub</a>
+          </div>
+        </article>
+      </div>
+      <div class="tabpanel" role="tabpanel" id="panel-sqlpy" aria-labelledby="tab-sqlpy" hidden>
+        <article class="block ficha" aria-labelledby="fh-sqlpy">
+          <header><span class="em">🐍</span><h3 id="fh-sqlpy" data-i18n="lab_sqlpy_title">SQL y Python juntos</h3></header>
+          <p class="lvl"><span class="sk work" data-i18n="lab_sqlpy_level">Lo uso en mi trabajo</span></p>
+          <div class="f-grid">
+            <section><h4 data-i18n="f_prob">Problema</h4><p data-i18n="lab_sqlpy_prob">SQL es excelente para filtrar y agregar, y Python para automatizar y revisar. Casi siempre los necesitas juntos.</p></section>
+            <section><h4 data-i18n="fl_concepts">Conceptos</h4><ul data-i18n="lab_sqlpy_concepts"><li>Deja que la base de datos haga el trabajo pesado (filtros y agregados).</li><li>Python recibe el resultado en un DataFrame para revisarlo, graficarlo o guardarlo.</li><li>Usa parámetros en las consultas, nunca texto pegado.</li></ul></section>
+          </div>
+          <h4 data-i18n="fl_diagram">Diagrama</h4><pre class="diagram" tabindex="0" aria-label="Diagrama"><code>Python --consulta SQL (con parámetros)--&gt; base de datos
+Python &lt;--------- DataFrame ---------------- resultado</code></pre>
+          <h4 data-i18n="fl_example">Ejemplo</h4><p data-i18n="lab_sqlpy_example">Con SQLite, que viene con Python, creo una tabla de ventas, la consulto con un parámetro y reviso el resultado en pandas. Funciona sin instalar nada más que pandas.</p>
+          <h4 data-i18n="fl_code">Código</h4><pre class="code" tabindex="0"><code>import sqlite3
+import pandas as pd
+
+con = sqlite3.connect(":memory:")
+con.execute("CREATE TABLE ventas (pais TEXT, monto REAL)")
+con.executemany("INSERT INTO ventas VALUES (?, ?)",
+                [("CO", 100), ("CO", 250), ("MX", 80)])
+
+df = pd.read_sql(
+    "SELECT pais, SUM(monto) AS total FROM ventas WHERE monto &gt; ? GROUP BY pais",
+    con, params=(90,))
+print(df)</code></pre>
+          <h4 data-i18n="fl_expected">Qué deberías ver</h4><pre class="code out" tabindex="0"><code>  pais  total
+0   CO  350.0</code></pre><p data-i18n="lab_sqlpy_outnote">MX no aparece porque su única venta (80) no pasa el filtro monto > 90.</p>
+          <h4 data-i18n="fl_errors">Errores comunes</h4><ul data-i18n="lab_sqlpy_errors"><li>Armar la consulta con f-strings: abre la puerta a la inyección SQL.</li><li>Traer toda la tabla a pandas y filtrar allá, en vez de filtrar en SQL.</li><li>Olvidar cerrar la conexión o confirmar los cambios.</li></ul>
+          <div class="f-foot">
+            <div><h4 data-i18n="fl_refs">Referencias</h4><ul class="refs"><li><a href="https://docs.python.org/3/library/sqlite3.html" target="_blank" rel="noopener">sqlite3 (Python docs)</a></li><li><a href="https://pandas.pydata.org/docs/reference/api/pandas.read_sql.html" target="_blank" rel="noopener">pandas.read_sql</a></li></ul></div>
+            <a class="btn ghost" href="https://github.com/MariaCatalinaGarciaCanas" target="_blank" rel="noopener" data-i18n="fl_repo">Más en mi GitHub</a>
+          </div>
+        </article>
+      </div>
+      <div class="tabpanel" role="tabpanel" id="panel-cloud" aria-labelledby="tab-cloud" hidden>
+        <article class="block ficha" aria-labelledby="fh-cloud">
+          <header><span class="em">☁️</span><h3 id="fh-cloud" data-i18n="lab_cloud_title">Nube: almacenamiento y permisos mínimos</h3></header>
+          <p class="lvl"><span class="sk learning" data-i18n="lab_cloud_level">En formación</span></p>
+          <div class="f-grid">
+            <section><h4 data-i18n="f_prob">Problema</h4><p data-i18n="lab_cloud_prob">Los datos de un pipeline necesitan un lugar en la nube, y quien los lee no debería poder borrarlos ni ver todo.</p></section>
+            <section><h4 data-i18n="fl_concepts">Conceptos</h4><ul data-i18n="lab_cloud_concepts"><li><b>Cuenta de almacenamiento y contenedores:</b> una por proyecto, con un contenedor por capa (bronze, silver, gold).</li><li><b>Mínimo privilegio:</b> cada persona o servicio recibe solo el permiso que necesita.</li><li><b>Responsabilidad compartida:</b> el proveedor cuida la infraestructura, tú cuidas datos y accesos.</li></ul></section>
+          </div>
+          <h4 data-i18n="fl_diagram">Diagrama</h4><pre class="diagram" tabindex="0" aria-label="Diagrama"><code>Cuenta de almacenamiento
+ ├─ contenedor bronze   (escribe: pipeline)
+ ├─ contenedor silver   (escribe: pipeline)
+ └─ contenedor gold     (lee: analistas)</code></pre>
+          <h4 data-i18n="fl_example">Ejemplo</h4><p data-i18n="lab_cloud_example">Creo una cuenta con espacio de nombres jerárquico y le doy a un analista solo permiso de lectura sobre gold.</p>
+          <h4 data-i18n="fl_code">Código</h4><pre class="code" tabindex="0"><code># Azure CLI (reemplaza los valores entre &lt; &gt;)
+az storage account create -n &lt;cuenta&gt; -g rg-datos -l eastus \
+  --sku Standard_LRS --kind StorageV2 --enable-hierarchical-namespace true
+
+az storage container create --account-name &lt;cuenta&gt; -n gold --auth-mode login
+
+az role assignment create --assignee &lt;id-del-analista&gt; \
+  --role "Storage Blob Data Reader" \
+  --scope /subscriptions/&lt;sub&gt;/resourceGroups/rg-datos/providers/Microsoft.Storage/storageAccounts/&lt;cuenta&gt;</code></pre>
+          <h4 data-i18n="fl_expected">Qué deberías ver</h4><pre class="code out" tabindex="0"><code>Cada comando devuelve un JSON con provisioningState: "Succeeded" o el rol asignado.</code></pre><p data-i18n="lab_cloud_outnote">Pruébalo en una suscripción de práctica y borra el grupo de recursos al terminar, para no pagar de más.</p>
+          <h4 data-i18n="fl_errors">Errores comunes</h4><ul data-i18n="lab_cloud_errors"><li>Dar el rol Owner o Contributor "para que funcione".</li><li>Dejar el acceso público abierto en un contenedor con datos.</li><li>Guardar llaves de acceso en el código en vez de usar identidades.</li></ul>
+          <div class="f-foot">
+            <div><h4 data-i18n="fl_refs">Referencias</h4><ul class="refs"><li><a href="https://learn.microsoft.com/en-us/azure/storage/common/storage-account-overview" target="_blank" rel="noopener">Storage account overview (Microsoft Learn)</a></li><li><a href="https://learn.microsoft.com/en-us/azure/security/fundamentals/shared-responsibility" target="_blank" rel="noopener">Shared responsibility in the cloud (Microsoft Learn)</a></li></ul></div>
+            <a class="btn ghost" href="https://github.com/MariaCatalinaGarciaCanas" target="_blank" rel="noopener" data-i18n="fl_repo">Más en mi GitHub</a>
+          </div>
+        </article>
+      </div>
+      <div class="tabpanel" role="tabpanel" id="panel-agent" aria-labelledby="tab-agent" hidden>
+        <article class="block ficha" aria-labelledby="fh-agentsec">
+          <header><span class="em">🛡️</span><h3 id="fh-agentsec" data-i18n="lab_agentsec_title">Agentes de IA: herramientas y permisos</h3></header>
+          <p class="lvl"><span class="sk learning" data-i18n="lab_agentsec_level">En formación</span></p>
+          <div class="f-grid">
+            <section><h4 data-i18n="f_prob">Problema</h4><p data-i18n="lab_agentsec_prob">Un agente de IA no solo responde: ejecuta herramientas. Si alguien logra engañarlo con un texto, puede usar esas herramientas de forma peligrosa.</p></section>
+            <section><h4 data-i18n="fl_concepts">Conceptos</h4><ul data-i18n="lab_agentsec_concepts"><li><b>Inyección de prompts:</b> instrucciones escondidas en datos que el agente lee.</li><li><b>Agencia excesiva:</b> el agente tiene más herramientas o permisos de los que necesita.</li><li><b>Control:</b> lista de herramientas permitidas, solo lectura por defecto y aprobación humana para acciones que cambian cosas.</li></ul></section>
+          </div>
+          <h4 data-i18n="fl_diagram">Diagrama</h4><pre class="diagram" tabindex="0" aria-label="Diagrama"><code>Usuario / documento --&gt; AGENTE --&gt; [lista permitida] --&gt; herramienta
+                                  \--&gt; acción que cambia datos --&gt; aprobación humana</code></pre>
+          <h4 data-i18n="fl_example">Ejemplo</h4><p data-i18n="lab_agentsec_example">Mi agente solo puede consultar ventas. Si un texto le pide borrar una tabla, la herramienta no existe en la lista y la acción se bloquea.</p>
+          <h4 data-i18n="fl_code">Código</h4><pre class="code" tabindex="0"><code># Capa de control entre el modelo y las herramientas (esquema)
+PERMITIDAS = {
+    "consultar_ventas": {"solo_lectura": True},
+    "exportar_reporte": {"solo_lectura": False},   # cambia cosas
+}
+
+def ejecutar(nombre, args, aprobado_por_humano=False):
+    if nombre not in PERMITIDAS:
+        raise PermissionError(f"Herramienta no permitida: {nombre}")
+    if not PERMITIDAS[nombre]["solo_lectura"] and not aprobado_por_humano:
+        raise PermissionError("Requiere aprobación humana")
+    return HERRAMIENTAS[nombre](**args)</code></pre>
+          <h4 data-i18n="fl_expected">Qué deberías ver</h4><pre class="code out" tabindex="0"><code>ejecutar("borrar_tabla", {})        -&gt; PermissionError: Herramienta no permitida: borrar_tabla
+ejecutar("exportar_reporte", {})   -&gt; PermissionError: Requiere aprobación humana</code></pre><p data-i18n="lab_agentsec_outnote">Es un esquema de la idea, no un agente completo. Mi proyecto de AI Security lo va a probar con ataques reales.</p>
+          <h4 data-i18n="fl_errors">Errores comunes</h4><ul data-i18n="lab_agentsec_errors"><li>Confiar en que el prompt del sistema "prohíbe" algo: se controla en el código, no solo en el texto.</li><li>Darle al agente una cuenta con permisos de administrador.</li><li>No registrar qué herramientas usó, ni con qué argumentos.</li></ul>
+          <div class="f-foot">
+            <div><h4 data-i18n="fl_refs">Referencias</h4><ul class="refs"><li><a href="https://owasp.org/www-project-top-10-for-large-language-model-applications/" target="_blank" rel="noopener">OWASP Top 10 for LLM Applications</a></li><li><a href="https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview" target="_blank" rel="noopener">Tool use with Claude (Anthropic docs)</a></li></ul></div>
+            <a class="btn ghost" href="https://github.com/MariaCatalinaGarciaCanas" target="_blank" rel="noopener" data-i18n="fl_repo">Más en mi GitHub</a>
+          </div>
+        </article>
       </div>
       <div class="tabpanel" role="tabpanel" id="panel-pbi" aria-labelledby="tab-pbi" hidden>
         <article class="block" aria-labelledby="b-pbi">
@@ -384,6 +680,33 @@
               <p class="sub" data-i18n="key_cards">Conceptos clave</p>
               <div class="cards" id="gitCards"></div>
             </article>
+
+        <article class="block ficha" aria-labelledby="fh-gitflow">
+          <header><span class="em">🌿</span><h3 id="fh-gitflow" data-i18n="lab_gitflow_title">Git desde la terminal: ramas y commits</h3></header>
+          <p class="lvl"><span class="sk applied" data-i18n="lab_gitflow_level">Lo he aplicado en proyectos</span></p>
+          <div class="f-grid">
+            <section><h4 data-i18n="f_prob">Problema</h4><p data-i18n="lab_gitflow_prob">Cambias un archivo, algo se rompe y no sabes qué fue lo último que tocaste. Git guarda cada cambio con un mensaje para poder volver.</p></section>
+            <section><h4 data-i18n="fl_concepts">Conceptos</h4><ul data-i18n="lab_gitflow_concepts"><li><b>Commit:</b> una foto del proyecto con un mensaje que explica el cambio.</li><li><b>Rama:</b> una copia de trabajo para probar sin tocar lo que ya funciona.</li><li><b>Push:</b> sube tus commits a GitHub.</li></ul></section>
+          </div>
+          <h4 data-i18n="fl_diagram">Diagrama</h4><pre class="diagram" tabindex="0" aria-label="Diagrama"><code>main  ●────●────────────●  (merge)
+           \          /
+feature     ●────●───●   (tu rama)</code></pre>
+          <h4 data-i18n="fl_example">Ejemplo</h4><p data-i18n="lab_gitflow_example">Creo una rama para un cambio, reviso lo que voy a guardar, hago el commit y subo la rama a GitHub para abrir un pull request.</p>
+          <h4 data-i18n="fl_code">Código</h4><pre class="code" tabindex="0"><code>git status                       # qué cambió
+git switch -c feature/limpieza   # crear y entrar a una rama
+git add -p                       # elegir qué guardar, por partes
+git commit -m "Elimina duplicados en silver"
+git push -u origin feature/limpieza
+git log --oneline -5             # últimos commits</code></pre>
+          <h4 data-i18n="fl_expected">Qué deberías ver</h4><pre class="code out" tabindex="0"><code>[feature/limpieza 3f2a9c1] Elimina duplicados en silver
+ 1 file changed, 4 insertions(+), 1 deletion(-)</code></pre><p data-i18n="lab_gitflow_outnote">El código de 7 caracteres (3f2a9c1) es distinto en cada commit.</p>
+          <h4 data-i18n="fl_errors">Errores comunes</h4><ul data-i18n="lab_gitflow_errors"><li>Hacer commit directo a main sin probar.</li><li>Mensajes como "cambios" o "fix": en un mes nadie sabrá qué fue.</li><li>Subir contraseñas o llaves: agrégalas al .gitignore antes del primer commit.</li></ul>
+          <div class="f-foot">
+            <div><h4 data-i18n="fl_refs">Referencias</h4><ul class="refs"><li><a href="https://git-scm.com/book/en/v2" target="_blank" rel="noopener">Pro Git (libro oficial)</a></li><li><a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches" target="_blank" rel="noopener">GitHub Docs: about branches</a></li></ul></div>
+            <a class="btn ghost" href="https://github.com/MariaCatalinaGarciaCanas" target="_blank" rel="noopener" data-i18n="fl_repo">Más en mi GitHub</a>
+          </div>
+        </article>
+
       </div>
       <div class="tabpanel" role="tabpanel" id="panel-vs" aria-labelledby="tab-vs" hidden>
         <article class="block" aria-labelledby="b-vs">
@@ -405,6 +728,50 @@
             </article>
       </div>
       <p class="tabs-note" data-i18n="tabs_note">Voy sumando lecciones a medida que estudio.</p>
+    </div>
+  </section>
+
+  <!-- ============ 7. FORMACIÓN ============ -->
+  <section class="section alt" id="formacion" aria-labelledby="t-formacion">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2 id="t-formacion" data-i18n="s_edu">Formación</h2>
+          <p class="lead" data-i18n="s_edu_l">Lo que ya terminé, lo que estoy estudiando ahora y lo que lo complementa.</p>
+        </div>
+      </div>
+      <div class="grid">
+        <article class="tile edu">
+          <span class="status ok" data-i18n="ed_done">Obtenido</span>
+          <h3 data-i18n="ed1_t">Ingeniería Metalúrgica</h3>
+          <p class="inst">Universidad Industrial de Santander</p>
+        </article>
+        <article class="tile edu">
+          <span class="status ok" data-i18n="ed_done">Obtenido</span>
+          <h3 data-i18n="ed2_t">Especialización en Inteligencia de Negocios y Big Data</h3>
+          <p class="inst">Corporación Asturias</p>
+        </article>
+        <article class="tile edu">
+          <span class="status ok" data-i18n="ed_done">Obtenido</span>
+          <h3 data-i18n="ed3_t">Técnico en programación de aplicaciones en la nube</h3>
+          <p class="inst">SENA</p>
+        </article>
+        <article class="tile edu">
+          <span class="status now" data-i18n="ed_now">En curso</span>
+          <h3 data-i18n="ed4_t">Tecnólogo en Gestión de Redes de Datos</h3>
+          <p class="inst">SENA</p>
+        </article>
+        <article class="tile edu">
+          <span class="status now" data-i18n="ed_now">En curso</span>
+          <h3 data-i18n="ed5_t">Estudiante de Inteligencia Artificial</h3>
+          <p data-i18n="ed5_p">Con foco en seguridad de IA.</p>
+        </article>
+        <article class="tile edu">
+          <span class="status comp" data-i18n="ed_comp">Complementaria</span>
+          <h3 data-i18n="ed6_t">Formación complementaria</h3>
+          <p data-i18n="ed6_p">Data Science, programación, cloud, Data Engineering y AI Security. Mis insignias verificadas están en <a href="https://www.credly.com/users/catacanass" target="_blank" rel="noopener">Credly</a>.</p>
+        </article>
+      </div>
     </div>
   </section>
 
