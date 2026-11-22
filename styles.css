@@ -1,0 +1,310 @@
+/* =====================================================================
+   Catalina · Datos con ojo de inspectora
+   Hoja de estilos — organizada por secciones:
+   1. Variables y base        5. Tarjetas (artículos, videos, proyectos)
+   2. Barra superior          6. Trayectoria (3 etapas)
+   3. Hero                    7. Aprende conmigo (pestañas)
+   4. Secciones y botones     8. Laboratorios interactivos
+                              9. Pie, puntero y responsive
+   ===================================================================== */
+
+/* ---------- 1. Variables y base ---------- */
+:root{
+  --bg:#faf7ff; --band:#f2ecff; --card:#ffffff; --line:#e4dcf7; --ink:#241a3d; --soft:#52487a;
+  --violet:#7c3aed; --lav:#6d28d9; --cyan:#0e7490; --ok:#047857; --bad:#b91c1c;
+  --glass:rgba(250,247,255,.9);
+  --shadow:0 8px 24px rgba(36,26,61,.07);
+  --shadow-lg:0 16px 40px rgba(76,29,149,.16);
+  --radius:24px; --wrap:1120px; --gap:24px;
+  --section:clamp(56px,8vw,96px);
+  --ease:cubic-bezier(.2,.7,.2,1);
+  color-scheme:light;
+}
+:root[data-theme="dark"]{
+  --bg:#0b0b12; --band:#10101b; --card:#151522; --line:#2c2646; --ink:#f5f3ff; --soft:#b9b1d6;
+  --lav:#a78bfa; --cyan:#22d3ee; --ok:#34d399; --bad:#f87171;
+  --glass:rgba(11,11,18,.9);
+  --shadow:0 8px 24px rgba(0,0,0,.35);
+  --shadow-lg:0 16px 40px rgba(0,0,0,.5);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth; scroll-padding-top:96px; background:var(--bg)}
+body{margin:0; background:var(--bg); color:var(--ink); font-family:"Nunito",system-ui,sans-serif; font-size:1.0625rem; line-height:1.6}
+h1,h2,h3{font-family:"Fredoka","Nunito",system-ui,sans-serif; font-weight:600; line-height:1.15; margin:0}
+img{max-width:100%; display:block}
+a{color:var(--lav)}
+:focus-visible{outline:3px solid var(--lav); outline-offset:3px; border-radius:8px}
+.wrap{max-width:var(--wrap); margin:0 auto; padding-left:max(24px,env(safe-area-inset-left)); padding-right:max(24px,env(safe-area-inset-right))}
+.skip{position:absolute; left:-9999px; top:8px; z-index:100; background:var(--violet); color:#fff; padding:8px 16px; border-radius:12px; font-weight:700; text-decoration:none}
+.skip:focus{left:12px}
+
+/* ---------- 2. Barra superior (marca, secciones, herramientas) ---------- */
+.topbar{position:sticky; top:0; z-index:60; background:var(--glass); -webkit-backdrop-filter:saturate(1.4) blur(10px); backdrop-filter:saturate(1.4) blur(10px); border-bottom:1px solid var(--line); padding-top:env(safe-area-inset-top,0px)}
+.topbar .wrap{display:flex; align-items:center; gap:12px; min-height:64px}
+.brand{font-family:"Fredoka",sans-serif; font-weight:600; font-size:1.2rem; color:var(--ink); text-decoration:none; white-space:nowrap}
+.nav{display:flex; gap:2px; flex:1; min-width:0; overflow-x:auto; scrollbar-width:none; margin-left:8px}
+.nav::-webkit-scrollbar{display:none}
+.nav a{white-space:nowrap; padding:6px 14px; border-radius:999px; text-decoration:none; color:var(--soft); font-weight:700; font-size:.95rem; transition:color .2s, background .2s}
+.nav a.on{color:var(--lav); background:rgba(124,58,237,.12)}
+@media (hover:hover){.nav a:hover{color:var(--lav); background:rgba(124,58,237,.08)}}
+
+.tools{position:relative; display:flex; gap:8px; align-items:center; margin-left:auto}
+.tbtn{height:44px; min-width:44px; padding:0 10px; border-radius:999px; border:2px solid var(--line); background:var(--card); color:var(--ink); font:inherit; font-weight:700; font-size:15px; cursor:pointer; display:inline-flex; align-items:center; justify-content:center; gap:4px; transition:border-color .2s}
+.tbtn.icon{font-size:20px; padding:0; width:44px}
+.tbtn[aria-expanded="true"]{border-color:var(--lav)}
+@media (hover:hover){.tbtn:hover{border-color:var(--lav)}}
+.lang span{opacity:.45}
+.lang span.on{opacity:1; color:var(--lav)}
+.panel{position:absolute; top:calc(100% + 10px); right:0; width:min(300px,calc(100vw - 28px)); background:var(--card); border:2px solid var(--line); border-radius:22px; padding:16px; box-shadow:var(--shadow-lg)}
+.panel[hidden]{display:none}
+.panel h2{font-size:1.1rem; margin:0 0 4px}
+.panel p{margin:0 0 10px; color:var(--soft); font-size:.9rem; line-height:1.4}
+.panel fieldset{border:0; margin:0 0 12px; padding:0}
+.panel legend{font-family:"Fredoka",sans-serif; font-weight:500; font-size:.95rem; color:var(--soft); margin-bottom:6px; padding:0}
+.opts{display:flex; flex-wrap:wrap; gap:6px}
+.opts button{font:inherit; font-size:.9rem; font-weight:700; cursor:pointer; color:var(--ink); background:var(--bg); border:2px solid var(--line); border-radius:999px; padding:4px 12px}
+.opts button[aria-pressed="true"]{background:var(--violet); border-color:var(--violet); color:#fff}
+
+/* ---------- 3. Hero ---------- */
+.hero{padding:clamp(40px,6vw,88px) 0 var(--section)}
+.hero-grid{display:grid; grid-template-columns:1.2fr .8fr; gap:48px; align-items:center}
+.hero h1{font-size:clamp(2.4rem,6vw,4rem); letter-spacing:-.01em}
+.hero .tag{font-size:clamp(1.15rem,2.2vw,1.45rem); color:var(--soft); max-width:30ch; margin:16px 0 22px; line-height:1.5}
+.chips{display:flex; flex-wrap:wrap; gap:8px; padding:0; margin:0; list-style:none}
+.chips li{background:var(--card); border:2px solid var(--line); border-radius:999px; padding:4px 14px; font-weight:700; font-size:.95rem}
+.chips li:first-child{background:var(--violet); border-color:var(--violet); color:#fff}
+.chips li a{display:block; margin:-4px -14px; padding:4px 14px; border-radius:999px; color:inherit; text-decoration:none}
+.chips li{transition:border-color .2s, transform .2s var(--ease), color .2s}
+@media (hover:hover){.chips li:has(a):hover{border-color:var(--lav); color:var(--lav); transform:translateY(-2px)}}
+.links{display:flex; flex-wrap:wrap; gap:8px; padding:0; margin:22px 0 0; list-style:none}
+.links a{display:inline-flex; align-items:center; gap:6px; text-decoration:none; color:var(--ink); background:var(--card); border:2px solid var(--line); border-radius:12px; padding:6px 14px; font-weight:700; font-size:.92rem; transition:border-color .2s, color .2s, transform .2s var(--ease)}
+@media (hover:hover){.links a:hover{border-color:var(--lav); color:var(--lav); transform:translateY(-2px)}}
+.photo{position:relative; width:min(100%,380px); aspect-ratio:1; margin-inline:auto; border-radius:40px; overflow:hidden; background:linear-gradient(150deg,#8b5cf6,#4c1d95); box-shadow:var(--shadow-lg)}
+.photo::before{content:""; position:absolute; inset:0; background:radial-gradient(circle at 25% 18%,rgba(255,255,255,.28),transparent 48%)}
+.photo img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 100%}
+
+/* ---------- 4. Secciones y botones ---------- */
+.section{padding:var(--section) 0}
+.section.alt{background:var(--band)}
+.sec-head{display:flex; flex-wrap:wrap; align-items:flex-end; justify-content:space-between; gap:16px 32px; margin-bottom:36px}
+.sec-head h2{font-size:clamp(1.8rem,3.4vw,2.5rem)}
+.lead{color:var(--soft); max-width:60ch; margin:10px 0 0; font-size:1.06rem}
+.sec-actions{display:flex; gap:12px; flex-wrap:wrap}
+.more{margin:28px 0 0; color:var(--soft)}
+.more:empty{display:none}
+.btn{display:inline-flex; align-items:center; gap:8px; background:var(--violet); color:#fff; font-weight:700; text-decoration:none; border-radius:999px; padding:12px 28px; border:2px solid var(--violet); transition:background .2s, transform .2s var(--ease), box-shadow .2s}
+.btn.ghost{background:transparent; color:var(--lav); border-color:var(--lav)}
+@media (hover:hover){
+  .btn:hover{background:var(--lav); border-color:var(--lav); transform:translateY(-2px); box-shadow:var(--shadow-lg)}
+  .btn.ghost:hover{background:rgba(124,58,237,.1); color:var(--lav)}
+}
+
+/* ---------- 5. Tarjetas: artículos, videos y proyectos ---------- */
+/* 3 columnas en escritorio; todas las tarjetas de una fila miden lo mismo */
+.grid{display:grid; gap:var(--gap); grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr))}
+.tile{position:relative; display:flex; flex-direction:column; background:var(--card); border:2px solid var(--line); border-radius:var(--radius); padding:26px; text-decoration:none; color:var(--ink); box-shadow:var(--shadow); transition:transform .25s var(--ease), box-shadow .25s, border-color .25s}
+.tile .em{font-size:36px; line-height:1; margin-bottom:14px}
+.tile h3{font-size:1.25rem; margin:0 0 8px}
+.tile p{margin:0 0 18px; color:var(--soft); font-size:1rem; line-height:1.6}
+.tile .go{margin-top:auto; display:inline-flex; align-items:center; gap:6px; font-weight:700; color:var(--lav); text-decoration:none}
+.tile .go::after{content:"→"; transition:transform .25s var(--ease)}
+.tile .tags{margin:auto 0 16px}
+.tile .tags+.go{margin-top:0}
+.tags{display:flex; flex-wrap:wrap; gap:6px; padding:0; list-style:none}
+.tags li{background:var(--bg); border:2px solid var(--line); border-radius:999px; padding:0 10px; font-size:.85rem; font-weight:700; color:var(--soft)}
+@media (hover:hover){
+  a.tile:hover{transform:translateY(-4px); box-shadow:var(--shadow-lg); border-color:var(--lav)}
+  a.tile:hover .go::after, .tile .go:hover::after{transform:translateX(4px)}
+}
+/* Tarjeta de video: miniatura 16:9 (se llena sola al pegar la URL del video) */
+.tile.video{padding:14px 14px 26px}
+.video h3,.video p,.video .go{padding-inline:12px}
+.thumb{position:relative; aspect-ratio:16/9; border-radius:calc(var(--radius) - 8px); overflow:hidden; margin-bottom:18px; display:grid; place-items:center; background:linear-gradient(135deg,#7c3aed,#312e81 75%)}
+.thumb::before{content:""; position:absolute; inset:0; background:radial-gradient(circle at 20% 15%,rgba(255,255,255,.25),transparent 45%)}
+.thumb img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover}
+.play{position:relative; z-index:1; width:60px; height:60px; border-radius:50%; background:rgba(255,255,255,.95); display:grid; place-items:center; box-shadow:0 6px 20px rgba(0,0,0,.25); transition:transform .25s var(--ease)}
+.play::after{content:""; margin-left:5px; border-left:18px solid var(--violet); border-top:11px solid transparent; border-bottom:11px solid transparent}
+/* Con miniatura propia (ya trae el título) el botón de play se hace pequeño y va en la esquina */
+.thumb.has-img .play{position:absolute; right:12px; bottom:12px; width:42px; height:42px}
+.thumb.has-img .play::after{margin-left:3px; border-left-width:13px; border-top-width:8px; border-bottom-width:8px}
+@media (hover:hover){.video:hover .play{transform:scale(1.12)}}
+.kicker{display:block; padding-inline:12px; margin:0 0 4px; font-size:.85rem; font-weight:700; color:var(--lav)}
+/* Última tarjeta: invitación al canal */
+.more-tile{justify-content:center; align-items:center; text-align:center; padding:26px; background:var(--bg); border-style:dashed; border-color:var(--lav)}
+.more-tile h3,.more-tile p,.more-tile .go{padding-inline:0}
+.more-tile .go{margin-top:0}
+.more-tile .em{font-size:48px}
+/* Proyecto en construcción */
+.tile.wip{border-style:dashed; border-color:var(--lav)}
+.badge{position:absolute; top:20px; right:20px; display:inline-flex; align-items:center; gap:8px; background:rgba(124,58,237,.14); color:var(--lav); font-weight:700; font-size:.82rem; border-radius:999px; padding:2px 12px}
+.badge::before{content:""; width:8px; height:8px; border-radius:50%; background:var(--violet); animation:pulse 1.8s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.35; transform:scale(.8)}}
+
+/* ---------- 6. Mi camino: 3 etapas ---------- */
+.stages{list-style:none; margin:0; padding:0; display:grid; gap:var(--gap)}
+.stage{position:relative; display:grid; grid-template-columns:minmax(220px,300px) 1fr; gap:20px 40px; align-items:start; background:var(--card); border:2px solid var(--line); border-radius:var(--radius); padding:28px; box-shadow:var(--shadow); transition:border-color .25s, box-shadow .25s}
+.stage.now{border-color:var(--lav); box-shadow:var(--shadow-lg)}
+.stage:not(:last-child)::after{content:""; position:absolute; left:49px; top:100%; height:var(--gap); border-left:3px dotted var(--violet)}
+.stage-num{width:44px; height:44px; border-radius:50%; background:var(--violet); color:#fff; display:grid; place-items:center; font-family:"Fredoka",sans-serif; font-weight:600; font-size:1.2rem; margin-bottom:12px}
+.when{display:block; font-size:.92rem; font-weight:700; color:var(--lav); letter-spacing:.02em}
+.stage h3{font-size:1.4rem; margin-top:4px}
+.bullets{list-style:none; margin:0; padding:0; display:grid; gap:12px}
+.bullets li{position:relative; padding-left:22px; color:var(--soft); font-size:1rem; line-height:1.5}
+.bullets li::before{content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:50%; background:var(--violet)}
+
+/* ---------- 7. Aprende conmigo: pestañas ---------- */
+.tabs{position:relative; display:flex; gap:8px; overflow-x:auto; scroll-snap-type:x proximity; scrollbar-width:none; -webkit-overflow-scrolling:touch; padding:4px 2px 14px}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:0 0 auto; scroll-snap-align:center; min-height:44px; font:inherit; font-weight:700; cursor:pointer; color:var(--ink); background:var(--card); border:2px solid var(--line); border-radius:999px; padding:6px 20px; transition:background .2s, border-color .2s, color .2s, transform .2s var(--ease)}
+@media (hover:hover){.tab:hover{border-color:var(--lav); transform:translateY(-2px)}}
+.tab[aria-selected="true"]{background:var(--violet); border-color:var(--violet); color:#fff}
+.tabpanel[hidden]{display:none}
+.tabpanel{animation:tabIn .35s var(--ease)}
+@keyframes tabIn{from{opacity:0; transform:translateY(10px)}to{opacity:1; transform:none}}
+.tabs-note{margin:20px 0 0; color:var(--soft); font-size:.95rem}
+
+/* ---------- 8. Laboratorios interactivos ---------- */
+.block{background:var(--card); border:2px solid var(--line); border-radius:28px; padding:24px; margin-bottom:20px; scroll-margin-top:70px}
+.block>header{display:flex; align-items:center; gap:12px; margin-bottom:6px}
+.block>header .em{font-size:30px}
+.block h3{font-size:1.4rem}
+.block h3 small{font-family:"Nunito",sans-serif; font-weight:600; font-size:.9rem; color:var(--soft); margin-left:6px}
+.block>p{margin:0 0 16px; color:var(--soft)}
+.snow{color:var(--cyan)}
+.sub{font-family:"Fredoka",sans-serif; font-weight:500; font-size:1.15rem; margin:24px 0 10px}
+.lesson{background:var(--bg); border:2px solid var(--line); border-radius:20px; padding:18px; margin-top:14px}
+.lesson h4{font-family:"Fredoka",sans-serif; font-weight:500; font-size:1.1rem; margin:0 0 10px}
+.note{margin:0 0 12px; color:var(--soft); font-size:.95rem}
+.seg{display:flex; gap:8px; flex-wrap:wrap; margin:0 0 14px}
+.seg button{font:inherit; font-weight:700; cursor:pointer; color:var(--ink); background:var(--card); border:2px solid var(--line); border-radius:999px; padding:6px 18px}
+.seg button[aria-pressed="true"]{background:rgba(124,58,237,.13); border-color:var(--lav); color:var(--lav)}
+.seg button[aria-pressed="true"]::before{content:"✓ "}
+.seg.topics button{padding:6px 14px}
+.tablewrap{overflow-x:auto}
+table{border-collapse:collapse; width:100%; min-width:300px}
+th,td{text-align:left; padding:8px 12px; border-bottom:2px dashed var(--line)}
+th{font-family:"Fredoka",sans-serif; font-weight:500; color:var(--soft)}
+.n{text-align:right; font-variant-numeric:tabular-nums}
+.count{font-family:"Fredoka",sans-serif; font-size:1.25rem; margin:14px 0 4px}
+.why{margin:0; color:var(--soft)}
+.code{background:var(--card); border:2px solid var(--line); border-radius:14px; padding:12px 14px; font-family:ui-monospace,Menlo,Consolas,monospace; font-size:.9rem; overflow-x:auto; white-space:pre-wrap; color:var(--lav); margin:12px 0}
+.mail{border-left:5px solid var(--violet)}
+.mail b{color:var(--cyan); font-weight:700}
+
+/* Laboratorios */
+.row{display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin:0 0 14px}
+.act{font:inherit; font-weight:700; cursor:pointer; background:var(--card); color:var(--lav); border:2px dashed var(--lav); border-radius:12px; padding:5px 14px}
+.act.next{background:var(--lav); color:var(--bg); border-style:solid; box-shadow:0 0 0 4px rgba(124,58,237,.18); animation:nudge 1.6s ease-in-out infinite}
+@keyframes nudge{50%{box-shadow:0 0 0 8px rgba(124,58,237,.06)}}
+@media (prefers-reduced-motion: reduce){.act.next{animation:none}}
+.act.ghost{color:var(--soft); border:2px solid var(--line)}
+.act.mono{font-family:ui-monospace,Menlo,Consolas,monospace; font-size:.92rem}
+.lbl{font-size:.88rem; font-weight:700; color:var(--soft); margin:0 0 6px}
+.how{background:var(--card); border:2px solid var(--line); border-radius:16px; padding:10px 14px; margin:0 0 14px; font-size:.93rem; line-height:1.5}
+.how b{font-family:"Fredoka",sans-serif; font-weight:500}
+.how ol{margin:6px 0 0; padding-left:20px}
+.how .learn{display:block; margin-top:6px; color:var(--soft)}
+.warn{display:block; margin:0 0 12px; padding:8px 12px; border-radius:12px; border:2px solid var(--bad); color:var(--bad); font-weight:700; font-size:.92rem}
+.boxes{display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.box{background:var(--card); border:2px solid var(--line); border-radius:16px; padding:12px; font-size:.95rem; line-height:1.45; transition:border-color .3s, box-shadow .3s}
+.box>b{display:block; font-family:"Fredoka",sans-serif; font-weight:500; font-size:1rem; margin-bottom:6px}
+.box.hi{border-color:var(--lav); box-shadow:0 0 0 4px rgba(124,58,237,.15)}
+.box.badb{border-color:var(--bad)}
+.box table{min-width:0; font-size:.9rem}
+.box th,.box td{padding:4px 6px}
+.empty{color:var(--soft); font-style:italic}
+.pill{display:inline-block; border-radius:999px; padding:0 9px; font-size:.8rem; font-weight:700; border:2px solid currentColor; margin:4px 4px 0 0; line-height:1.5}
+.pill.ok{color:var(--ok)} .pill.bad{color:var(--bad)} .pill.neu{color:var(--lav)}
+.file{display:inline-block; font-family:ui-monospace,Menlo,Consolas,monospace; font-size:.85rem; background:var(--bg); border:2px solid var(--line); border-radius:8px; padding:0 8px; margin:2px 0}
+.commits{margin:0; padding:0; list-style:none; font-family:ui-monospace,Menlo,Consolas,monospace; font-size:.82rem}
+.commits li{border-left:3px solid var(--violet); padding-left:8px; margin:4px 0}
+.bar{height:14px; border-radius:999px; background:var(--line); overflow:hidden; margin:6px 0 4px}
+.bar i{display:block; height:100%; background:var(--violet); transition:width .5s}
+
+/* Tarjetas de analogías */
+.cards{display:grid; gap:12px; grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
+.card{display:flex; flex-direction:column; justify-content:flex-start; width:100%; text-align:left; font:inherit; color:var(--ink); background:var(--card); border:2px solid var(--line); border-radius:20px; padding:14px 16px; cursor:pointer}
+.card[aria-expanded="true"]{border-color:var(--lav)}
+@media (hover:hover){.card:hover{border-color:var(--lav)}}
+.card .ce{display:block; font-size:26px; line-height:1.2}
+.card .ct{display:block; font-family:"Fredoka",sans-serif; font-weight:500; font-size:1.08rem; margin:4px 0}
+.card .an{display:block; color:var(--soft); font-size:.95rem; line-height:1.5}
+.card .ex{display:none; margin-top:10px; padding-top:10px; border-top:2px dashed var(--line); font-size:.95rem; line-height:1.5}
+.card[aria-expanded="true"] .ex{display:block}
+.card .hint{display:block; margin-top:8px; font-size:.85rem; font-weight:700; color:var(--lav)}
+
+/* VS Code de mentira */
+.vsc{display:grid; grid-template-columns:48px 1fr; grid-template-rows:auto 1fr auto; border-radius:16px; overflow:hidden; background:#1f1d2e; color:#e9e6ff; border:2px solid var(--line); font-family:ui-monospace,Menlo,Consolas,monospace; font-size:.85rem}
+.vsc button{font:inherit; color:inherit; background:transparent; border:0; cursor:pointer; text-align:left}
+@media (hover:hover){.vsc button:hover{background:rgba(167,139,250,.14)}}
+.vsc button.on{background:rgba(167,139,250,.28); box-shadow:inset 0 0 0 2px #a78bfa}
+.vtop{grid-column:1/3; padding:8px 12px; background:#2a2740; text-align:center !important; color:#c9c3ef}
+.vbar{grid-row:2/4; display:flex; flex-direction:column; background:#17151f; padding:4px 0}
+.vbar button{font-size:20px; height:44px; text-align:center !important; font-family:system-ui,sans-serif}
+.ved{display:flex; flex-direction:column; justify-content:flex-start; padding:12px 14px; min-height:150px; line-height:1.7}
+.ved span{display:block; white-space:pre}
+.ved .ln{color:#6e6890} .ved .kw{color:#c4b5fd} .ved .st{color:#86efac} .ved .cm{color:#8b85a8}
+.vterm{border-top:2px solid #2a2740 !important; padding:8px 14px; color:#a5f3fc}
+.vinfo{margin-top:12px}
+.vinfo b{font-family:"Fredoka",sans-serif; font-weight:500; font-size:1.1rem}
+.dots{display:flex; flex-wrap:wrap; gap:5px; margin:4px 0 8px}
+.dot{width:18px; height:18px; border-radius:50%; border:2px solid var(--line); background:var(--bg)}
+.dot.on{background:var(--violet); border-color:var(--violet)}
+.plot{display:block; width:100%; max-width:520px; height:auto; background:var(--card); border:2px solid var(--line); border-radius:14px; margin:4px 0 0}
+.plot .axis{stroke:var(--line); stroke-width:2}
+.plot .curve{fill:none; stroke:var(--lav); stroke-width:3; stroke-linejoin:round}
+.plot .ptr{fill:var(--violet)}
+.plot .pte{fill:var(--card); stroke:var(--cyan); stroke-width:3}
+.plot .trail{fill:var(--lav); opacity:.35}
+.plot .ball{fill:var(--violet); stroke:var(--card); stroke-width:3}
+.lg{display:inline-block; width:12px; height:12px; border-radius:50%; margin-right:5px; vertical-align:-1px}
+.lg.ptr{background:var(--violet)} .lg.pte{border:3px solid var(--cyan)}
+kbd{font-family:ui-monospace,Menlo,Consolas,monospace; font-size:.85rem; background:var(--card); border:2px solid var(--line); border-bottom-width:4px; border-radius:8px; padding:0 6px}
+
+/* ---------- 9. Pie, puntero y responsive ---------- */
+.footer{background:var(--band); padding:var(--section) 0; text-align:center}
+.footer-photo{width:112px; height:112px; border-radius:50%; object-fit:cover; margin:0 auto 20px; border:4px solid var(--card); box-shadow:0 0 0 3px var(--lav), var(--shadow)}
+.footer h2{font-size:clamp(1.8rem,3.4vw,2.4rem)}
+.footer p{color:var(--soft); margin:10px 0 0}
+.footer .btn{margin-top:22px; padding:14px 34px; font-size:1.05rem}
+
+/* Rastro del puntero */
+.spark{position:fixed; pointer-events:none; z-index:50; font-size:18px; animation:float 1s ease-out forwards}
+@keyframes float{from{opacity:1; transform:translate(-50%,-50%) scale(.6) rotate(0)}
+  to{opacity:0; transform:translate(calc(-50% + var(--dx)),calc(-50% + 46px)) scale(1.2) rotate(var(--r))}}
+
+/* Pantallas medianas */
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr; gap:32px; text-align:center}
+  .hero-photo{order:-1}
+  .photo{width:min(100%,260px); border-radius:32px}
+  .hero .tag{margin-inline:auto}
+  .chips,.links{justify-content:center}
+  .stage{grid-template-columns:1fr}
+}
+/* Móvil: la barra se divide en 2 filas y las pestañas se deslizan */
+@media (max-width:760px){
+  .topbar .wrap{flex-wrap:wrap; gap:0 12px; padding-block:6px}
+  .nav{order:3; flex-basis:100%; margin:4px 0 0}
+  html{scroll-padding-top:112px}
+  .tabs{-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 28px),transparent); mask-image:linear-gradient(90deg,#000 calc(100% - 28px),transparent); padding-right:28px}
+}
+@media (max-width:520px){
+  .wrap{padding-left:max(18px,env(safe-area-inset-left)); padding-right:max(18px,env(safe-area-inset-right))}
+  .block{padding:18px 14px} .lesson{padding:14px 12px}
+  .stage{padding:22px 18px}
+  .tile{padding:22px}
+  .tile.video{padding:12px 12px 22px}
+}
+
+/* Dispositivos táctiles: se oculta el selector de puntero y el rastro */
+@media (hover:none){
+  #curBtn,#curPanel,.spark{display:none !important}
+}
+/* Menos movimiento si la persona lo prefiere */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important}
+  .spark{display:none}
+}
